@@ -2,13 +2,15 @@ import type { NextPage } from 'next';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { query } from 'thin-backend';
-import { useQuery } from 'thin-backend-react';
+import { useQuery, useIsLoggedIn } from 'thin-backend-react';
 
 const Todo: NextPage = () => {
   const router = useRouter();
   const { id } = router.query;
 
   const todo_list_id = id?.toString();
+
+  const isLoggedIn = useIsLoggedIn();
 
   const todo_list = useQuery(query('todo_lists').where('id', todo_list_id!));
 
@@ -35,9 +37,12 @@ const Todo: NextPage = () => {
           </>
         ))
       )}
-      <h3 className='text-[2rem] lg:text-[3rem] md:text-[3rem] font-extrabold text-gray-700 w-full lg:w-2/3 md:w-full'>
-        Tasks:
-      </h3>
+      {isLoggedIn && (
+        <h3 className='text-[2rem] lg:text-[3rem] md:text-[3rem] font-extrabold text-gray-700 w-full lg:w-2/3 md:w-full'>
+          Tasks:
+        </h3>
+      )}
+
       {todos === null ? (
         <div>Loading ...</div>
       ) : (

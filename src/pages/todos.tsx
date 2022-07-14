@@ -15,10 +15,15 @@ const Todos: NextPage = () => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <div className='w-screen h-screen flex flex-col justify-center items-center p-4'>
-        <h2 className='text-[3rem] lg:text-[5rem] md:text-[5rem] font-extrabold text-gray-700'>
-          <span className='text-purple-300'>Next</span> Day
-        </h2>
+        <Link href='/todos'>
+          <a className='text-[3rem] lg:text-[5rem] md:text-[5rem] font-extrabold text-gray-700'>
+            <span className='text-purple-300'>Next</span> Day
+          </a>
+        </Link>
         <UserStatus />
+        <h3 className='text-[2rem] lg:text-[3rem] md:text-[3rem] font-extrabold text-gray-700 w-full text-left'>
+          Task Lists:
+        </h3>
         <TodoList />
         <Link href='/'>
           <a className='text-sm text-violet-500 underline decoration-dotted underline-offset-2 cursor-pointer mt-3'>

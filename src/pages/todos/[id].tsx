@@ -35,6 +35,9 @@ const Todo: NextPage = () => {
           </>
         ))
       )}
+      <h3 className='text-[2rem] lg:text-[3rem] md:text-[3rem] font-extrabold text-gray-700 w-full text-left'>
+        Tasks:
+      </h3>
       {todos === null ? (
         <div>Loading ...</div>
       ) : (

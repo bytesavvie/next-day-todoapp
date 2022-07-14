@@ -19,7 +19,11 @@ const UserStatus = () => {
     return (
       <ThinBackend>
         <h2 className='text-2xl text-gray-700'>
-          Welcome {user?.email.split('@')[0]}!
+          Welcome{' '}
+          <span className='font-bold'>
+            {user?.email.split('@')[0]}
+            <span className='text-purple-300'>!</span>
+          </span>
         </h2>
         <SignOutBtn />
       </ThinBackend>

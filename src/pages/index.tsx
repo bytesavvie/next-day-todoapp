@@ -66,7 +66,7 @@ const Home: NextPage = () => {
             </div> */}
             <Link href='/todos'>
               <button className='bg-purple-700 hover:bg-purple-500 text-white font-bold py-2 px-4 rounded-full ml-2 mt-3'>
-                ToDo Next
+                Start Next Day
               </button>
             </Link>
           </div>

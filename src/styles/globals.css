@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.thin-auth-icon-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.thin-auth-icon-container img {
+  width: 128px;
+}

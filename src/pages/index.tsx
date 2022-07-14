@@ -1,13 +1,9 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-import { ThinBackend, useIsLoggedIn } from 'thin-backend-react';
-// import SignInBtn from '../components/auth/SignInBtn';
-// import SignOutBtn from '../components/auth/SignOutBtn';
+import { ThinBackend } from 'thin-backend-react';
 
 const Home: NextPage = () => {
-  // const isLoggedIn = useIsLoggedIn();
-
   return (
     <ThinBackend>
       <Head>
@@ -61,9 +57,6 @@ const Home: NextPage = () => {
             <p className='text-sm text-gray-600'>
               Sign In to your account or create a new one.
             </p>
-            {/* <div className='flex flex-row justify-center items-center mt-3'>
-              {isLoggedIn ? <SignOutBtn /> : <SignInBtn />}
-            </div> */}
             <Link href='/todos'>
               <button className='bg-purple-700 hover:bg-purple-500 text-white font-bold py-2 px-4 rounded-full ml-2 mt-3'>
                 Start Next Day

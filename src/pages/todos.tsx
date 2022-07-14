@@ -21,7 +21,7 @@ const Todos: NextPage = () => {
           </a>
         </Link>
         <UserStatus />
-        <h3 className='text-[2rem] lg:text-[3rem] md:text-[3rem] font-extrabold text-gray-700 w-full text-left'>
+        <h3 className='text-[2rem] lg:text-[3rem] md:text-[3rem] font-extrabold text-gray-700 w-full lg:w-2/3 md:w-full'>
           Task Lists:
         </h3>
         <TodoList />

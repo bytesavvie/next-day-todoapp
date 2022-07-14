@@ -34,7 +34,7 @@ function TodoList() {
                       ? (count++,
                         (
                           <li key={todo.id}>
-                            {todo.name} {todo.completed ? '✅' : '❌'}
+                            {todo.name} {todo.isCompleted ? '✅' : '❌'}
                           </li>
                         ))
                       : null

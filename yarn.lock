@@ -205,9 +205,9 @@
   version "1.0.0"
   resolved "https://thin.dev/types/11ab4292-08d6-41e2-811e-ca2bd891a12d/HWaTuwWtiiuWZLKxmDRgduSWZvHnLhHa#3a381754712faaaa7f0f8849368cba23ba2ead10"
 
-"@types/thin-backend@https://thin.dev/types/92906bbb-a9dc-448e-b840-ddb0f3f16317/aoyYHUOGYdJVktDVbpGNAtpTXBcboZmX":
+"@types/thin-backend@https://thin.dev/types/3e93ffb3-401e-4690-bbf9-7d3f95b882f2/zTviHsgghfWcAJmZrJHiiEkOaNRTnxcW":
   version "1.0.0"
-  resolved "https://thin.dev/types/92906bbb-a9dc-448e-b840-ddb0f3f16317/aoyYHUOGYdJVktDVbpGNAtpTXBcboZmX#7c3acd776272e2cfcf1e4bda738945181e33087f"
+  resolved "https://thin.dev/types/3e93ffb3-401e-4690-bbf9-7d3f95b882f2/zTviHsgghfWcAJmZrJHiiEkOaNRTnxcW#c76ed847fb0533aa6c97f1a5049e1f157794b8bc"
 
 "@typescript-eslint/parser@^5.21.0":
   version "5.30.6"

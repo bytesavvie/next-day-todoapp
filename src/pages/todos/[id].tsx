@@ -62,7 +62,7 @@ const Todo: NextPage = () => {
                         {todo.name}
                       </h2>{' '}
                       <p>Duration: {todo.duration}min</p>
-                      <p>Completed: {todo.completed ? '✅' : '❌'}</p>
+                      <p>Completed: {todo.isCompleted ? '✅' : '❌'}</p>
                     </div>
                   )
                 )

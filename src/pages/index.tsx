@@ -18,7 +18,7 @@ const Home: NextPage = () => {
 
       <div className='w-screen h-screen flex flex-col justify-center items-center p-4'>
         <h2 className='text-[3rem] lg:text-[5rem] md:text-[5rem] font-extrabold text-gray-700'>
-          <span className='text-purple-300'>ToDo</span> Next
+          <span className='text-purple-300'>Next</span> Day
         </h2>
         <p className='text-2xl text-gray-700'>
           Crate List of Tasks and Get Stuff Done

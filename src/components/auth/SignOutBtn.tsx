@@ -6,7 +6,7 @@ const SignOutBtn = () => {
 
   async function doLogOut() {
     setLoading(true);
-    await logout({ redirect: 'http://localhost:3000/todos' });
+    await logout({ redirect: 'http://nextday.vercel.app' });
     // ({ redirect: 'http://localhost:3000/' })
     setLoading(false);
   }

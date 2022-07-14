@@ -1,9 +1,10 @@
+import type { NextPage } from 'next';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { query } from 'thin-backend';
 import { useQuery } from 'thin-backend-react';
 
-const Todo = () => {
+const Todo: NextPage = () => {
   const router = useRouter();
   const { id } = router.query;
 

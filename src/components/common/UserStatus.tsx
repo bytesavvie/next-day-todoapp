@@ -18,7 +18,9 @@ const UserStatus = () => {
   if (isLoggedIn === true) {
     return (
       <ThinBackend>
-        <p>Welcome {user?.email.split('@')[0]}</p>
+        <h2 className='text-2xl text-gray-700'>
+          Welcome {user?.email.split('@')[0]}!
+        </h2>
         <SignOutBtn />
       </ThinBackend>
     );

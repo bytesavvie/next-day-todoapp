@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import { ThinBackend } from 'thin-backend-react';
+import TodoList from '../components/common/TodoList';
 
 import UserStatus from '../components/common/UserStatus';
 
@@ -18,6 +19,7 @@ const Todos: NextPage = () => {
           <span className='text-purple-300'>Next</span> Day
         </h2>
         <UserStatus />
+        <TodoList />
         <Link href='/'>
           <a className='text-sm text-violet-500 underline decoration-dotted underline-offset-2 cursor-pointer mt-3'>
             Go Home 🏠

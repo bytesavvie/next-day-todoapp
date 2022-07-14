@@ -19,7 +19,7 @@
     "@types/node": "18.0.0",
     "@types/react": "18.0.14",
     "@types/react-dom": "18.0.5",
-    "@types/thin-backend": "https://thin.dev/types/6c1907be-9c55-4291-98f2-f94e69c8a9d3/ynjDwTnUlhWYbvdilysxCMzaosBYrJDI",
+    "@types/thin-backend": "https://thin.dev/types/11ab4292-08d6-41e2-811e-ca2bd891a12d/HWaTuwWtiiuWZLKxmDRgduSWZvHnLhHa",
     "autoprefixer": "^10.4.7",
     "eslint": "8.18.0",
     "eslint-config-next": "12.1.6",

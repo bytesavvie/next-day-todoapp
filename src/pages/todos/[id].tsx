@@ -8,12 +8,12 @@ const Todo: NextPage = () => {
   const router = useRouter();
   const { id } = router.query;
 
-  const todo_list_id = id!.toString();
+  const todo_list_id = id?.toString();
 
-  const todo_list = useQuery(query('todo_lists').where('id', todo_list_id));
+  const todo_list = useQuery(query('todo_lists').where('id', todo_list_id!));
 
   const todos = useQuery(
-    query('todos').where('todoListsId', todo_list_id).orderByDesc('createdAt')
+    query('todos').where('todoListsId', todo_list_id!).orderByDesc('createdAt')
   );
 
   let count = 0;

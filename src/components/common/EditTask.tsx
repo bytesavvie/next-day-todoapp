@@ -9,7 +9,7 @@ function EditTask({ taskId }: { taskId: string }) {
     const { value: formValues } = await MySwal.fire({
       title: 'Edit task',
       html: `
-        <div class="grid grid-cols-1 grid-rows-2 gap-3 mt-3 pt-3 w-full lg:w-2/3 md:w-full">
+        <div class="grid grid-cols-1 grid-rows-2 gap-3 mt-3 pt-3 w-full">
           <div class="flex flex-col justify-center items-center text-center rounded shadow-xl border-2 border-gray-500 h-full w-full p-6">
           <label class="text-gray-700 font-semibold" for="name">Task name</label>
             <input

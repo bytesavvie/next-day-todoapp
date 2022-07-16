@@ -37,7 +37,7 @@ const Home: NextPage = () => {
           <div className='hover:scale-105 duration-500 flex flex-col justify-center items-center text-center rounded shadow-xl border-2 border-gray-500 h-full w-full p-6'>
             <h2 className='text-lg text-gray-700 font-semibold'>Pomodoro</h2>
             <p className='text-sm text-gray-600'>
-              A simple pomodoro teqnique used on every task in the List. Great
+              A simple pomodoro technique used on every task in the List. Great
               for getting things done. Manage your time better.
             </p>
             <Link href='/pomodoro'>

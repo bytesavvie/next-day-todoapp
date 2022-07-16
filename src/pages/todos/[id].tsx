@@ -57,9 +57,9 @@ const Todo: NextPage = () => {
                   (todo) => (
                     count++,
                     (
-                      <div className='hover:scale-105 duration-500 flex flex-col text-center rounded shadow-xl border-2 border-gray-500 h-full w-full p-1'>
+                      <div className='flex flex-col text-center rounded shadow-xl border-2 border-gray-500 h-full w-full p-1'>
                         <div
-                          className='hover:scale-105 duration-500 flex flex-col justify-center items-start text-center h-full w-full p-6'
+                          className='flex flex-col justify-center items-start text-center h-full w-full p-6'
                           key={todo.id}
                         >
                           <h2 className='text-2xl text-gray-700 font-semibold'>

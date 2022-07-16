@@ -11,7 +11,7 @@ const Todos: NextPage = () => {
   return (
     <ThinBackend>
       <Head>
-        <title>Next ToDo App</title>
+        <title>Next Day</title>
         <meta name='description' content='Create ToDo list and manage it' />
         <link rel='icon' href='/favicon.ico' />
       </Head>

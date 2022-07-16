@@ -7,15 +7,17 @@ const Home: NextPage = () => {
   return (
     <ThinBackend>
       <Head>
-        <title>Next ToDo App</title>
+        <title>Next Day</title>
         <meta name='description' content='Create ToDo list and manage it' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
       <div className='w-screen h-screen flex flex-col justify-center items-center p-4'>
-        <h2 className='text-[3rem] lg:text-[5rem] md:text-[5rem] font-extrabold text-gray-700'>
-          <span className='text-indigo-300'>Next</span> Day
-        </h2>
+        <Link href='/'>
+          <a className='text-[3rem] lg:text-[5rem] md:text-[5rem] font-extrabold text-gray-700'>
+            <span className='text-indigo-300'>Next</span> Day
+          </a>
+        </Link>
         <p className='text-2xl text-gray-700'>
           Crate List of Tasks and Get Stuff Done
         </p>
@@ -26,14 +28,11 @@ const Home: NextPage = () => {
               Create a list of tasks for the day and get them done. You can add
               tasks, delete tasks, and mark tasks as done.
             </p>
-            <a
-              className='text-sm text-violet-500 underline decoration-dotted underline-offset-2 cursor-pointer mt-3'
-              href='https://nextjs.org/'
-              target='_blank'
-              rel='noreferrer'
-            >
-              Read about making good habbits
-            </a>
+            <Link href='/habits'>
+              <a className='text-sm text-violet-500 underline decoration-dotted underline-offset-2 cursor-pointer mt-3'>
+                Read about making good habits
+              </a>
+            </Link>
           </div>
           <div className='hover:scale-105 duration-500 flex flex-col justify-center items-center text-center rounded shadow-xl border-2 border-gray-500 h-full w-full p-6'>
             <h2 className='text-lg text-gray-700 font-semibold'>Pomodoro</h2>
@@ -41,14 +40,11 @@ const Home: NextPage = () => {
               A simple pomodoro teqnique used on every task in the List. Great
               for getting things done. Manage your time better.
             </p>
-            <a
-              className='text-sm text-violet-500 underline decoration-dotted underline-offset-2 cursor-pointer mt-3'
-              href='https://www.typescriptlang.org/'
-              target='_blank'
-              rel='noreferrer'
-            >
-              Read about Pomodoro technique
-            </a>
+            <Link href='/pomodoro'>
+              <a className='text-sm text-violet-500 underline decoration-dotted underline-offset-2 cursor-pointer mt-3'>
+                Read about Pomodoro technique
+              </a>
+            </Link>
           </div>
           <div className='flex flex-col justify-center items-center text-center rounded shadow-xl border-2 border-gray-500 h-full w-full p-6'>
             <h2 className='text-lg text-gray-700 font-semibold'>

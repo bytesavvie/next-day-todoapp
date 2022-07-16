@@ -15,7 +15,7 @@ const Home: NextPage = () => {
       <div className='w-screen h-screen flex flex-col justify-center items-center p-4'>
         <Link href='/'>
           <a className='text-[3rem] lg:text-[5rem] md:text-[5rem] font-extrabold text-gray-700'>
-            <span className='text-indigo-300'>Next</span> Day
+            <span className='text-indigo-400'>Next</span> Day
           </a>
         </Link>
         <p className='text-2xl text-gray-700'>
@@ -29,7 +29,7 @@ const Home: NextPage = () => {
               tasks, delete tasks, and mark tasks as done.
             </p>
             <Link href='/habits'>
-              <a className='text-sm text-violet-500 underline decoration-dotted underline-offset-2 cursor-pointer mt-3'>
+              <a className='text-sm text-violet-600 underline decoration-dotted underline-offset-2 cursor-pointer mt-3'>
                 Read about making good habits
               </a>
             </Link>
@@ -41,7 +41,7 @@ const Home: NextPage = () => {
               for getting things done. Manage your time better.
             </p>
             <Link href='/pomodoro'>
-              <a className='text-sm text-violet-500 underline decoration-dotted underline-offset-2 cursor-pointer mt-3'>
+              <a className='text-sm text-violet-600 underline decoration-dotted underline-offset-2 cursor-pointer mt-3'>
                 Read about Pomodoro technique
               </a>
             </Link>

@@ -12,7 +12,7 @@ const Pomodoro: NextPage = () => {
       </Head>
       <Link href='/'>
         <a className='text-[3rem] lg:text-[5rem] md:text-[5rem] font-extrabold text-gray-700'>
-          <span className='text-indigo-300'>Next</span> Day
+          <span className='text-indigo-400'>Next</span> Day
         </a>
       </Link>
       <h3 className='text-[1.75rem] lg:text-[2rem] md:text-[2rem] font-extrabold text-gray-700 w-full lg:w-2/3 md:w-full pt-8'>
@@ -50,7 +50,7 @@ const Pomodoro: NextPage = () => {
         </li>
       </ol>
       <Link href='/'>
-        <a className='text-sm text-violet-500 underline decoration-dotted underline-offset-2 cursor-pointer mt-3'>
+        <a className='text-sm text-violet-600 underline decoration-dotted underline-offset-2 cursor-pointer mt-3'>
           Go Home 🏠
         </a>
       </Link>

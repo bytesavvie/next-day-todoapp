@@ -85,7 +85,7 @@ const Todo: NextPage = () => {
         )}
 
         <Link href='/todos'>
-          <a className='text-sm text-violet-500 underline decoration-dotted underline-offset-2 cursor-pointer mt-3'>
+          <a className='text-sm text-violet-600 underline decoration-dotted underline-offset-2 cursor-pointer mt-3'>
             Go Back To List ⬅️
           </a>
         </Link>

@@ -19,14 +19,14 @@ const Todos: NextPage = () => {
         <div className='w-screen h-screen flex flex-col justify-start items-center p-4'>
           <Link href='/todos'>
             <a className='text-[3rem] lg:text-[5rem] md:text-[5rem] font-extrabold text-gray-700'>
-              <span className='text-indigo-300'>Next</span> Day
+              <span className='text-indigo-400'>Next</span> Day
             </a>
           </Link>
           <UserStatus />
 
           <TodoList />
           <Link href='/'>
-            <a className='text-sm text-violet-500 underline decoration-dotted underline-offset-2 cursor-pointer mt-3'>
+            <a className='text-sm text-violet-600 underline decoration-dotted underline-offset-2 cursor-pointer mt-3'>
               Go Home 🏠
             </a>
           </Link>
@@ -35,14 +35,14 @@ const Todos: NextPage = () => {
         <div className='w-screen h-screen flex flex-col justify-center items-center p-4'>
           <Link href='/todos'>
             <a className='text-[3rem] lg:text-[5rem] md:text-[5rem] font-extrabold text-gray-700'>
-              <span className='text-indigo-300'>Next</span> Day
+              <span className='text-indigo-400'>Next</span> Day
             </a>
           </Link>
           <UserStatus />
 
           <TodoList />
           <Link href='/'>
-            <a className='text-sm text-violet-500 underline decoration-dotted underline-offset-2 cursor-pointer mt-3'>
+            <a className='text-sm text-violet-600 underline decoration-dotted underline-offset-2 cursor-pointer mt-3'>
               Go Home 🏠
             </a>
           </Link>

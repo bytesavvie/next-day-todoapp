@@ -68,6 +68,7 @@ const Todo: NextPage = () => {
                           <p>Duration: {todo.duration}min</p>
                           <p>Completed: {todo.isCompleted ? '✅' : '❌'}</p>
                         </div>
+                        <hr />
                         <div className='flex flex-row justify-end gap-2 items-center h-full w-full p-1'>
                           <EditTask taskId={todo.id} />
                           <DeleteTask taskId={todo.id} />

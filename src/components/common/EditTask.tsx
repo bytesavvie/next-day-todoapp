@@ -45,8 +45,12 @@ function EditTask({ taskId }: { taskId: string }) {
         const duration = document.getElementById(
           'duration'
         ) as HTMLInputElement;
-        if (name.value === '' || duration.value === '') {
-          MySwal.showValidationMessage('Please fill out all fields');
+        if (
+          name.value === '' ||
+          duration.value === '' ||
+          duration.value === '0'
+        ) {
+          MySwal.showValidationMessage('Please fill in all fields');
           return false;
         }
         return {

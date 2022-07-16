@@ -3,6 +3,9 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { query } from 'thin-backend';
 import { useQuery, useIsLoggedIn } from 'thin-backend-react';
+import DeleteTask from '../../components/common/DeleteTask';
+import EditTask from '../../components/common/EditTask';
+import NewTask from '../../components/common/NewTask';
 
 const Todo: NextPage = () => {
   const router = useRouter();
@@ -21,7 +24,7 @@ const Todo: NextPage = () => {
   let count = 0;
 
   return (
-    <div className='w-screen h-screen flex flex-col justify-center items-center p-4'>
+    <div className='w-screen h-screen flex flex-col justify-start items-center p-4'>
       {todo_list === null ? (
         <div>Loading ...</div>
       ) : (
@@ -54,19 +57,26 @@ const Todo: NextPage = () => {
                 (todo) => (
                   count++,
                   (
-                    <div
-                      className='hover:scale-105 duration-500 cursor-pointer flex flex-col justify-center items-center text-center rounded shadow-xl border-2 border-gray-500 h-full w-full p-6'
-                      key={todo.id}
-                    >
-                      <h2 className='text-2xl text-gray-700 font-semibold'>
-                        {todo.name}
-                      </h2>{' '}
-                      <p>Duration: {todo.duration}min</p>
-                      <p>Completed: {todo.isCompleted ? '✅' : '❌'}</p>
+                    <div className='hover:scale-105 duration-500 cursor-pointer flex flex-col text-center rounded shadow-xl border-2 border-gray-500 h-full w-full p-1'>
+                      <div
+                        className='hover:scale-105 duration-500 cursor-pointer flex flex-col justify-center items-start text-center h-full w-full p-6'
+                        key={todo.id}
+                      >
+                        <h2 className='text-2xl text-gray-700 font-semibold'>
+                          {todo.name}
+                        </h2>{' '}
+                        <p>Duration: {todo.duration}min</p>
+                        <p>Completed: {todo.isCompleted ? '✅' : '❌'}</p>
+                      </div>
+                      <div className='flex flex-row justify-end gap-2 items-center h-full w-full p-1'>
+                        <EditTask taskId={todo.id} />
+                        <DeleteTask taskId={todo.id} />
+                      </div>
                     </div>
                   )
                 )
               )}
+              <NewTask todo_list_id={todo_list_id!} />
             </div>
             {count === 0 ? <p>The list is empty.</p> : null}
           </>

@@ -14,7 +14,7 @@ const SignInBtn = () => {
     <button
       onClick={() => doLogIn()}
       disabled={isLoading}
-      className='bg-purple-700 hover:bg-purple-500 text-white font-bold py-2 px-4 rounded-full mt-3'
+      className='bg-indigo-700 hover:bg-indigo-500 text-white font-bold py-2 px-4 rounded-full mt-3'
     >
       Sign In
     </button>

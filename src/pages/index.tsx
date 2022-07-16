@@ -14,7 +14,7 @@ const Home: NextPage = () => {
 
       <div className='w-screen h-screen flex flex-col justify-center items-center p-4'>
         <h2 className='text-[3rem] lg:text-[5rem] md:text-[5rem] font-extrabold text-gray-700'>
-          <span className='text-purple-300'>Next</span> Day
+          <span className='text-indigo-300'>Next</span> Day
         </h2>
         <p className='text-2xl text-gray-700'>
           Crate List of Tasks and Get Stuff Done
@@ -58,7 +58,7 @@ const Home: NextPage = () => {
               Sign In to your account or create a new one.
             </p>
             <Link href='/todos'>
-              <button className='bg-purple-700 hover:bg-purple-500 text-white font-bold py-2 px-4 rounded-full ml-2 mt-3'>
+              <button className='bg-indigo-700 hover:bg-indigo-500 text-white font-bold py-2 px-4 rounded-full ml-2 mt-3'>
                 Start Next Day
               </button>
             </Link>

@@ -22,7 +22,7 @@ const UserStatus = () => {
           Welcome{' '}
           <span className='font-bold'>
             {user?.email.split('@')[0]}
-            <span className='text-indigo-400'>!</span>
+            <span className='text-indigo-500'>!</span>
           </span>
         </h2>
         <SignOutBtn />

@@ -33,7 +33,7 @@ const UserStatus = () => {
   if (isLoggedIn === false) {
     return (
       <>
-        <p>Sign In to your account.</p>
+        <p>Sign in to your account.</p>
         <div className='flex flex-row justify-center items-center mt-3'>
           <SignInBtn />
         </div>

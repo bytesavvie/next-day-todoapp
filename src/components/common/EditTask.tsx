@@ -4,7 +4,7 @@ import withReactContent from 'sweetalert2-react-content';
 
 const MySwal = withReactContent(Swal);
 
-function EditTask({ taskId }: { taskId: string }) {
+function EditTask({ ...props }) {
   async function editTask() {
     const { value: formValues } = await MySwal.fire({
       title: 'Edit task',
@@ -18,6 +18,7 @@ function EditTask({ taskId }: { taskId: string }) {
               placeholder="Task name"
               aria-label="Task name"
               aria-required="true"
+              value=${props.name}
               required
               id="name"
             />
@@ -30,6 +31,7 @@ function EditTask({ taskId }: { taskId: string }) {
               placeholder="Duration"
               aria-label="Duration"
               aria-required="true"
+              value=${props.duration}
               required
               id="duration"
             />
@@ -62,7 +64,7 @@ function EditTask({ taskId }: { taskId: string }) {
 
     if (formValues) {
       const { name, duration } = formValues;
-      await updateRecord('todos', taskId, {
+      await updateRecord('todos', props.id, {
         name,
         // @ts-ignore
         duration

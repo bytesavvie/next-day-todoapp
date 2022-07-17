@@ -4,7 +4,7 @@ import withReactContent from 'sweetalert2-react-content';
 
 const MySwal = withReactContent(Swal);
 
-function EditList({ listId }: { listId: string }) {
+function EditList({ ...props }) {
   async function editListName() {
     await MySwal.fire({
       title: 'Edit list name',
@@ -18,6 +18,7 @@ function EditList({ listId }: { listId: string }) {
               placeholder="List name"
               aria-label="List name"
               aria-required="true"
+              value=${props.name}
               required
               id="name"
             />
@@ -36,7 +37,7 @@ function EditList({ listId }: { listId: string }) {
       return;
     }
 
-    updateRecord('todo_lists', listId, { name: name.value });
+    updateRecord('todo_lists', props.id, { name: name.value });
   }
 
   return (

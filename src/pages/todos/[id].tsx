@@ -31,18 +31,22 @@ const Todo: NextPage = () => {
         ) : (
           todo_list.map((todo_list) => (
             <>
+              <Link href='/todos'>
+                <a className='text-[3rem] lg:text-[5rem] md:text-[5rem] font-extrabold text-gray-700'>
+                  <span className='text-indigo-500'>Next</span> Day
+                </a>
+              </Link>
               <h1
                 className='text-[3rem] lg:text-[5rem] md:text-[5rem] font-extrabold text-gray-700'
                 key={todo_list.id}
               >
                 <p>{todo_list.name}</p>
               </h1>
-              <p>Todo-ID: {id}</p>
             </>
           ))
         )}
 
-        <h3 className='text-[2rem] lg:text-[3rem] md:text-[3rem] font-extrabold text-gray-700 w-full lg:w-2/3 md:w-full'>
+        <h3 className='text-[2rem] lg:text-[3rem] md:text-[3rem] font-extrabold text-gray-700 w-full lg:w-2/3 md:w-full mt-3'>
           Tasks:
         </h3>
 
@@ -57,9 +61,9 @@ const Todo: NextPage = () => {
                   (todo) => (
                     count++,
                     (
-                      <div className='flex flex-col text-center rounded shadow-xl border-2 border-gray-500 h-full w-full p-1'>
+                      <div className='flex flex-col text-center rounded shadow-xl border-2 border-gray-500 h-full w-11/12 p-1 m-auto'>
                         <div
-                          className='flex flex-col justify-center items-start text-center h-full w-full p-6'
+                          className='bg-slate-100 flex flex-col justify-center items-start text-center h-full w-full p-6 rounded'
                           key={todo.id}
                         >
                           <h2 className='text-2xl text-gray-700 font-semibold'>
@@ -68,9 +72,12 @@ const Todo: NextPage = () => {
                           <p>Duration: {todo.duration}min</p>
                           <p>Completed: {todo.isCompleted ? '✅' : '❌'}</p>
                         </div>
-                        <hr />
                         <div className='flex flex-row justify-end gap-2 items-center h-full w-full p-1'>
-                          <EditTask taskId={todo.id} />
+                          <EditTask
+                            id={todo.id}
+                            name={todo.name}
+                            duration={todo.duration}
+                          />
                           <DeleteTask taskId={todo.id} />
                         </div>
                       </div>
@@ -85,8 +92,8 @@ const Todo: NextPage = () => {
         )}
 
         <Link href='/todos'>
-          <a className='text-sm text-violet-600 underline decoration-dotted underline-offset-2 cursor-pointer mt-3'>
-            Go Back To List ⬅️
+          <a className='text-base text-violet-600 underline decoration-dotted underline-offset-2 cursor-pointer mt-3'>
+            Go Back To Lists ⬅️
           </a>
         </Link>
       </div>

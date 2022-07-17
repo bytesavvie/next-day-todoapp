@@ -22,7 +22,7 @@ const Home: NextPage = () => {
           Crate List of Tasks and Get Stuff Done
         </p>
         <div className='grid grid-cols-1 grid-rows-3 lg:grid-rows-1 md:grid-rows-1 lg:grid-cols-3 md:grid-cols-3 gap-3 mt-3 pt-3 w-full lg:w-2/3 md:w-full'>
-          <div className='hover:scale-105 duration-500 flex flex-col justify-center items-center text-center rounded shadow-xl border-2 border-gray-500 h-full w-full p-6'>
+          <div className='hover:scale-105 duration-500 flex flex-col justify-center items-center text-center rounded shadow-xl border-2 border-gray-500 h-full w-11/12 p-6 m-auto'>
             <h2 className='text-lg text-gray-700 font-semibold'>ToDo List</h2>
             <p className='text-sm text-gray-600'>
               Create a list of tasks for the day and get them done. You can add
@@ -34,7 +34,7 @@ const Home: NextPage = () => {
               </a>
             </Link>
           </div>
-          <div className='hover:scale-105 duration-500 flex flex-col justify-center items-center text-center rounded shadow-xl border-2 border-gray-500 h-full w-full p-6'>
+          <div className='hover:scale-105 duration-500 flex flex-col justify-center items-center text-center rounded shadow-xl border-2 border-gray-500 h-full w-11/12 p-6 m-auto'>
             <h2 className='text-lg text-gray-700 font-semibold'>Pomodoro</h2>
             <p className='text-sm text-gray-600'>
               A simple pomodoro technique used on every task in the List. Great
@@ -46,12 +46,12 @@ const Home: NextPage = () => {
               </a>
             </Link>
           </div>
-          <div className='flex flex-col justify-center items-center text-center rounded shadow-xl border-2 border-gray-500 h-full w-full p-6'>
+          <div className='flex flex-col justify-center items-center text-center rounded shadow-xl border-2 border-gray-500 h-full w-11/12 p-6 m-auto'>
             <h2 className='text-lg text-gray-700 font-semibold'>
               Start Your Day Here
             </h2>
             <p className='text-sm text-gray-600'>
-              Sign In to your account or create a new one.
+              Sign in to your account or create a new one.
             </p>
             <Link href='/todos'>
               <button className='bg-indigo-700 hover:bg-indigo-500 text-white font-bold py-2 px-4 rounded-full ml-2 mt-3'>

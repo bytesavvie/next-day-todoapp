@@ -49,7 +49,7 @@ function NewList() {
 
   return (
     <button onClick={addTodoList}>
-      <div className='hover:scale-105 duration-500 cursor-pointer flex flex-col justify-center items-center text-center rounded shadow-xl border-2 border-gray-500 h-full w-full p-6'>
+      <div className='hover:scale-105 duration-500 cursor-pointer flex flex-col justify-center items-center text-center rounded shadow-xl border-2 border-gray-500 h-full w-11/12 p-6 m-auto'>
         <h2 className='text-2xl text-gray-700 font-semibold'>
           {/* small plus emoji then Add New List */}
           <span role='img' aria-label='plus'>

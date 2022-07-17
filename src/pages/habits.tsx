@@ -100,7 +100,7 @@ const Habits: NextPage = () => {
       </p>
 
       <Link href='/'>
-        <a className='text-sm text-violet-600 underline decoration-dotted underline-offset-2 cursor-pointer mt-3'>
+        <a className='text-base text-violet-600 underline decoration-dotted underline-offset-2 cursor-pointer py-4'>
           Go Home 🏠
         </a>
       </Link>

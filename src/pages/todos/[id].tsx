@@ -18,14 +18,14 @@ const Todo: NextPage = () => {
   const todo_list = useQuery(query('todo_lists').where('id', todo_list_id!));
 
   const todos = useQuery(
-    query('todos').where('todoListsId', todo_list_id!).orderByDesc('createdAt')
+    query('todos').where('todoListsId', todo_list_id!).orderByAsc('createdAt')
   );
 
   let count = 0;
 
   return (
     (isLoggedIn && (
-      <div className='w-screen h-screen flex flex-col justify-start items-center p-4'>
+      <div className='w-full h-full flex flex-col justify-start items-center p-4'>
         {todo_list === null ? (
           <div>Loading ...</div>
         ) : (
@@ -61,16 +61,18 @@ const Todo: NextPage = () => {
                   (todo) => (
                     count++,
                     (
-                      <div className='flex flex-col text-center rounded shadow-xl border-2 border-gray-500 h-full w-11/12 p-1 m-auto'>
+                      <div className='flex flex-col rounded shadow-xl border-2 border-gray-500 h-full w-11/12 p-1 m-auto'>
                         <div
-                          className='bg-slate-100 flex flex-col justify-center items-start text-center h-full w-full p-6 rounded'
+                          className='bg-slate-100 flex flex-col justify-center items-start text-left h-full w-full p-6 rounded'
                           key={todo.id}
                         >
-                          <h2 className='text-2xl text-gray-700 font-semibold'>
+                          <h2 className='text-3xl text-gray-700 font-semibold'>
                             {todo.name}
                           </h2>{' '}
-                          <p>Duration: {todo.duration}min</p>
-                          <p>Completed: {todo.isCompleted ? '✅' : '❌'}</p>
+                          <ul className='list-none list-inside pl-'>
+                            <li>Duration: {todo.duration}min</li>
+                            <li>Completed: {todo.isCompleted ? '✅' : '❌'}</li>
+                          </ul>
                         </div>
                         <div className='flex flex-row justify-end gap-2 items-center h-full w-full p-1'>
                           <EditTask
@@ -92,7 +94,7 @@ const Todo: NextPage = () => {
         )}
 
         <Link href='/todos'>
-          <a className='text-base text-violet-600 underline decoration-dotted underline-offset-2 cursor-pointer mt-3'>
+          <a className='text-base text-violet-600 underline decoration-dotted underline-offset-2 cursor-pointer m-3'>
             Go Back To Lists ⬅️
           </a>
         </Link>

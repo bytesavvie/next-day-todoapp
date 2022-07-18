@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const Habits: NextPage = () => {
   return (
-    <div className='w-full h-screen flex flex-col justify-start items-center p-4'>
+    <div className='w-full h-full flex flex-col justify-start items-center p-4'>
       <Head>
         <title>Making Good Habits</title>
         <meta name='description' content='About making good habits' />

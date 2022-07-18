@@ -4,11 +4,12 @@ import { useQuery, useIsLoggedIn } from 'thin-backend-react';
 import DeleteList from './DeleteList';
 import EditList from './EditList';
 import NewList from './NewList';
+import PlayPomo from './PlayPomo';
 import UserStatus from './UserStatus';
 
 function TodoList() {
-  const todo_lists = useQuery(query('todo_lists').orderByDesc('createdAt'));
-  const todos = useQuery(query('todos').orderByDesc('createdAt'));
+  const todo_lists = useQuery(query('todo_lists').orderByAsc('createdAt'));
+  const todos = useQuery(query('todos').orderByAsc('createdAt'));
 
   const isLoggedIn = useIsLoggedIn();
 
@@ -24,7 +25,7 @@ function TodoList() {
 
   return (
     (isLoggedIn && (
-      <div className='w-screen h-screen flex flex-col justify-start items-center p-4'>
+      <div className='w-full h-full flex flex-col justify-start items-center p-4'>
         <Link href='/todos'>
           <a className='text-[3rem] lg:text-[5rem] md:text-[5rem] font-extrabold text-gray-700'>
             <span className='text-indigo-500'>Next</span> Day
@@ -42,29 +43,33 @@ function TodoList() {
               (
                 <div className='flex flex-col justify-center items-center rounded shadow-xl border-2 border-gray-500 h-full w-11/12 p-1 m-auto'>
                   <Link href={`/todos/${todo_list.id}`} key={todo_list.id}>
-                    <div className='bg-slate-100 cursor-pointer flex flex-col justify-center items-start text-center h-full w-full p-6 rounded'>
-                      <h2 className='text-2xl text-gray-700 font-semibold'>
+                    <div className='bg-slate-100 cursor-pointer flex flex-col justify-center items-start text-left h-full w-full p-6 rounded'>
+                      <h2 className='text-3xl text-gray-700 font-semibold'>
                         {todo_list.name}
                       </h2>
 
-                      <div>
+                      <ul className='list-disc list-inside'>
                         {todos?.map((todo) =>
                           todo.todoListsId === todo_list.id
                             ? (count++,
                               (
-                                <p key={todo.id}>
-                                  {todo.name} {todo.isCompleted ? '✅' : '❌'}
-                                </p>
+                                <li key={todo.id}>
+                                  {todo.name} ({todo.duration}min){' '}
+                                  {todo.isCompleted ? '✅' : '❌'}
+                                </li>
                               ))
                             : null
                         )}
-                      </div>
+                      </ul>
                       {count === 0 ? <p>The list is empty.</p> : null}
                     </div>
                   </Link>
-                  <div className='flex flex-row justify-end gap-2 items-center h-full w-full p-1'>
-                    <EditList id={todo_list.id} name={todo_list.name} />
-                    <DeleteList listId={todo_list.id} />
+                  <div className='flex flex-row justify-between items-center h-full w-full p-1'>
+                    <PlayPomo id={todo_list.id} />
+                    <div className='flex flex-row justify-end gap-2'>
+                      <EditList id={todo_list.id} name={todo_list.name} />
+                      <DeleteList listId={todo_list.id} />
+                    </div>
                   </div>
                 </div>
               )

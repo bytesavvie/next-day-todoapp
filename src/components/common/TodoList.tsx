@@ -71,7 +71,10 @@ function TodoList() {
                       <ResetPomo id={todo_list.id} />
                     </div>
                     <div className='flex flex-row justify-end gap-2'>
-                      <EditList id={todo_list.id} name={todo_list.name} />
+                      <EditList
+                        id={todo_list.id}
+                        name={todo_list.name.replace(/ /g, '\u00a0')}
+                      />
                       <DeleteList listId={todo_list.id} />
                     </div>
                   </div>

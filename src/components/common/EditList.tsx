@@ -6,7 +6,7 @@ const MySwal = withReactContent(Swal);
 
 function EditList({ ...props }) {
   async function editListName() {
-    await MySwal.fire({
+    const { value: formValues } = await MySwal.fire({
       title: 'Edit list name',
       html: `
         <div class="grid grid-cols-1 grid-rows-1 gap-3 mt-3 pt-3 w-full">
@@ -28,16 +28,25 @@ function EditList({ ...props }) {
       showCancelButton: true,
       didOpen: () => {
         document.getElementById('name')?.focus();
+      },
+      preConfirm: () => {
+        const name = document.getElementById('name') as HTMLInputElement;
+        if (name.value === '') {
+          MySwal.showValidationMessage('Please fill out all fields');
+          return false;
+        }
+        return {
+          name: name.value
+        };
       }
     });
 
-    const name = document.getElementById('name') as HTMLInputElement;
-    if (name.value === '') {
-      MySwal.showValidationMessage('Please fill out all fields');
-      return;
+    if (formValues) {
+      const { name } = formValues;
+      updateRecord('todo_lists', props.id, {
+        name
+      });
     }
-
-    updateRecord('todo_lists', props.id, { name: name.value });
   }
 
   return (

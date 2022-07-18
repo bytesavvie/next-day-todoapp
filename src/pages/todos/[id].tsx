@@ -77,7 +77,7 @@ const Todo: NextPage = () => {
                         <div className='flex flex-row justify-end gap-2 items-center h-full w-full p-1'>
                           <EditTask
                             id={todo.id}
-                            name={todo.name}
+                            name={todo.name.replace(/ /g, '\u00a0')}
                             duration={todo.duration}
                           />
                           <DeleteTask taskId={todo.id} />

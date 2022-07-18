@@ -11,9 +11,7 @@ function DeleteTask({ taskId }: { taskId: string }) {
       text: "You won't be able to revert this!",
       icon: 'warning',
       showCancelButton: true,
-      didOpen: () => {
-        MySwal.getConfirmButton()?.focus();
-      }
+      focusCancel: true
     }).then((result) => {
       if (result.value) {
         deleteRecord('todos', taskId);

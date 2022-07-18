@@ -5,6 +5,7 @@ import DeleteList from './DeleteList';
 import EditList from './EditList';
 import NewList from './NewList';
 import PlayPomo from './PlayPomo';
+import ResetPomo from './ResestPomo';
 import UserStatus from './UserStatus';
 
 function TodoList() {
@@ -65,7 +66,10 @@ function TodoList() {
                     </div>
                   </Link>
                   <div className='flex flex-row justify-between items-center h-full w-full p-1'>
-                    <PlayPomo id={todo_list.id} />
+                    <div className='flex flex-row justify-start gap-2'>
+                      <PlayPomo id={todo_list.id} />
+                      <ResetPomo id={todo_list.id} />
+                    </div>
                     <div className='flex flex-row justify-end gap-2'>
                       <EditList id={todo_list.id} name={todo_list.name} />
                       <DeleteList listId={todo_list.id} />

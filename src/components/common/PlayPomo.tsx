@@ -10,7 +10,8 @@ const PlayPomo = ({ ...props }) => {
       title: '',
       html: <Pomo id={props.id} />,
       showConfirmButton: false,
-      showCancelButton: false
+      showCancelButton: false,
+      allowOutsideClick: false
     });
   }
 

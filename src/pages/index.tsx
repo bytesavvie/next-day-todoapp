@@ -54,7 +54,7 @@ const Home: NextPage = () => {
               Sign in to your account or create a new one.
             </p>
             <Link href='/todos'>
-              <button className='bg-indigo-700 hover:bg-indigo-500 text-white font-bold py-2 px-4 rounded-full ml-2 mt-3'>
+              <button className='bg-indigo-700 hover:bg-indigo-500 text-white font-bold py-2 px-4 rounded-full mt-3'>
                 Start Next Day
               </button>
             </Link>

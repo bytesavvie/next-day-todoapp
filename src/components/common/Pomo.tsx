@@ -94,7 +94,7 @@ const Pomo = ({ ...props }) => {
             {!selectedTodo?.isCompleted && (
               <div>
                 <div className='text-2xl sm:text-3xl font-bold'>{todoName}</div>
-                <div className='text-4xl font-semibold py-2'>
+                <div className='text-4xl font-semibold py-2 sm:py-4'>
                   {todoDurationString}
                 </div>
               </div>

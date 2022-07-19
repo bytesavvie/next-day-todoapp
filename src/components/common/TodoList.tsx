@@ -45,7 +45,7 @@ function TodoList() {
                 <div className='flex flex-col justify-center items-center rounded shadow-xl border-2 border-gray-500 h-full w-11/12 p-1 m-auto'>
                   <Link href={`/todos/${todo_list.id}`} key={todo_list.id}>
                     <div className='bg-slate-100 cursor-pointer flex flex-col justify-center items-start text-left h-full w-full p-6 rounded'>
-                      <h2 className='text-3xl text-gray-700 font-semibold'>
+                      <h2 className='text-2xl text-gray-700 font-semibold'>
                         {todo_list.name}
                       </h2>
 

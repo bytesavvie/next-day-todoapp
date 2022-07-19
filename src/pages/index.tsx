@@ -12,7 +12,7 @@ const Home: NextPage = () => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <div className='w-screen h-screen flex flex-col justify-center items-center p-4'>
+      <div className='w-full h-screen flex flex-col justify-start md:justify-center items-center p-4'>
         <Link href='/'>
           <a className='text-[3rem] lg:text-[5rem] md:text-[5rem] font-extrabold text-gray-700'>
             <span className='text-indigo-500'>Next</span> Day

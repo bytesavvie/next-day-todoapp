@@ -11,3 +11,7 @@
 .thin-auth-icon-container img {
   width: 128px;
 }
+
+.swal2-html-container {
+  margin: 0em 0em !important;
+}

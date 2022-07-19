@@ -25,7 +25,7 @@ const Todo: NextPage = () => {
 
   return (
     (isLoggedIn && (
-      <div className='w-full h-full flex flex-col justify-start items-center p-4'>
+      <div className='w-full h-screen flex flex-col justify-start items-center p-4'>
         {todo_list === null ? (
           <div>Loading ...</div>
         ) : (
@@ -56,7 +56,7 @@ const Todo: NextPage = () => {
           ((count = 0),
           (
             <>
-              <div className='grid grid-cols-1 grid-rows-3 lg:grid-rows-1 md:grid-rows-1 lg:grid-cols-3 md:grid-cols-3 gap-3 mt-3 pt-3 w-full lg:w-2/3 md:w-full'>
+              <div className='grid grid-cols-1 grid-rows-3 lg:grid-rows-1 md:grid-rows-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-3 mt-3 pt-3 w-full lg:w-3/4 md:w-full'>
                 {todos.map(
                   (todo) => (
                     count++,
@@ -94,7 +94,7 @@ const Todo: NextPage = () => {
         )}
 
         <Link href='/todos'>
-          <a className='text-base text-violet-600 underline decoration-dotted underline-offset-2 cursor-pointer m-3'>
+          <a className='text-base text-violet-600 underline decoration-dotted underline-offset-2 cursor-pointer py-4'>
             Go Back To Lists ⬅️
           </a>
         </Link>

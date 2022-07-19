@@ -26,18 +26,18 @@ function TodoList() {
 
   return (
     (isLoggedIn && (
-      <div className='w-full h-full flex flex-col justify-start items-center p-4'>
+      <div className='w-full h-screen flex flex-col justify-start items-center p-4'>
         <Link href='/todos'>
           <a className='text-[3rem] lg:text-[5rem] md:text-[5rem] font-extrabold text-gray-700'>
             <span className='text-indigo-500'>Next</span> Day
           </a>
         </Link>
         <UserStatus />
-        <h3 className='text-[2rem] lg:text-[3rem] md:text-[3rem] font-extrabold text-gray-700 w-full lg:w-2/3 md:w-full'>
+        <h3 className='text-[2rem] lg:text-[3rem] md:text-[3rem] font-extrabold text-gray-700 w-full lg:w-2/3 '>
           Task Lists:
         </h3>
 
-        <div className='grid grid-cols-1 grid-rows-3 lg:grid-rows-1 md:grid-rows-1 lg:grid-cols-3 md:grid-cols-3 gap-3 mt-3 pt-3 w-full lg:w-2/3 md:w-full'>
+        <div className='grid grid-cols-1 grid-rows-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-3 mt-3 pt-3 w-full lg:w-3/4 md:w-full'>
           {todo_lists?.map(
             (todo_list) => (
               (count = 0),
@@ -85,7 +85,7 @@ function TodoList() {
           <NewList />
         </div>
         <Link href='/'>
-          <a className='text-base text-violet-600 underline decoration-dotted underline-offset-2 cursor-pointer mt-3'>
+          <a className='text-base text-violet-600 underline decoration-dotted underline-offset-2 cursor-pointer py-4'>
             Go Home 🏠
           </a>
         </Link>
@@ -99,7 +99,7 @@ function TodoList() {
         </Link>
         <UserStatus />
         <Link href='/'>
-          <a className='text-base text-violet-600 underline decoration-dotted underline-offset-2 cursor-pointer mt-3'>
+          <a className='text-base text-violet-600 underline decoration-dotted underline-offset-2 cursor-pointer py-4'>
             Go Home 🏠
           </a>
         </Link>

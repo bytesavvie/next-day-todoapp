@@ -148,7 +148,7 @@ const Pomo = ({ ...props }) => {
                 min
               </button>
               <button
-                className={`cursor-default text-sm sm:text-lg flex flex-row justify-start items-center h-full w-full p-1 rounded ${
+                className={`cursor-pointer text-sm sm:text-lg flex flex-row justify-start items-center h-full w-full p-1 rounded ${
                   selectedTodoId === todo.id &&
                   todo.isCompleted === false &&
                   'bg-rose-100'
@@ -161,7 +161,7 @@ const Pomo = ({ ...props }) => {
                 ${
                   todo.isCompleted && 'bg-green-100'
                 } disabled:opacity-60 disabled:cursor-not-allowed`}
-                id={todo.id}
+                onClick={() => setSelectedTodoId(todo.id)}
                 disabled={isPlaying && !(selectedTodoId == todo.id)}
               >
                 Take a break for 10min

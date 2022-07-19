@@ -75,7 +75,7 @@ function NewTask({ todo_list_id }: { todo_list_id: string }) {
   }
   return (
     <button onClick={addTask}>
-      <div className='hover:scale-105 duration-500 cursor-pointer flex flex-col justify-center items-center text-center rounded shadow-xl border-2 border-gray-500 h-full w-11/12 p-6 m-auto'>
+      <div className='hover:scale-105 duration-500 cursor-pointer flex flex-col justify-center items-center text-center rounded shadow-xl border-2 border-gray-500 h-1/8 w-11/12 p-6 m-auto my-0'>
         <h2 className='text-2xl text-gray-700 font-semibold'>
           <span role='img' aria-label='plus'>
             📝

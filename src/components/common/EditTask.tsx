@@ -26,7 +26,7 @@ function EditTask({ ...props }) {
           <div class="flex flex-col justify-center items-center text-center h-full w-full p-2">
             <label class="text-gray-700 font-semibold pb-2" for="duration">Duration (in minutes)</label>
           <input
-              class="text-gray-700 font-semibold rounded shadow-xl border-2 border-gray-500 p-2"
+              class="text-gray-700 font-semibold rounded shadow-md border-2 border-gray-500 p-2"
               type="number"
               placeholder="Duration"
               aria-label="Duration"

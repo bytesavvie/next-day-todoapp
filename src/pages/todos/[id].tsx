@@ -63,14 +63,19 @@ const Todo: NextPage = () => {
                     (
                       <div className='flex flex-col rounded shadow-xl border-2 border-gray-500 h-full w-11/12 p-1 m-auto'>
                         <div
-                          className='bg-slate-100 flex flex-col justify-center items-start text-left h-full w-full p-6 rounded'
+                          className='bg-slate-100 flex flex-col justify-center items-start text-left h-full w-full p-6 rounded '
                           key={todo.id}
                         >
-                          <h2 className='text-3xl text-gray-700 font-semibold'>
+                          <h2 className='text-3xl text-gray-700 font-bold underline underline-offset-4 decoration-indigo-400 decoration-dashed'>
                             {todo.name}
-                          </h2>{' '}
+                          </h2>
                           <ul className='list-none list-inside pl-'>
-                            <li>Duration: {todo.duration}min</li>
+                            <li>
+                              Duration:{' '}
+                              <span className='font-semibold'>
+                                {todo.duration} min
+                              </span>
+                            </li>
                             <li>Completed: {todo.isCompleted ? '✅' : '❌'}</li>
                           </ul>
                         </div>

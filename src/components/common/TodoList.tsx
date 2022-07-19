@@ -45,18 +45,28 @@ function TodoList() {
                 <div className='flex flex-col justify-center items-center rounded shadow-xl border-2 border-gray-500 h-full w-11/12 p-1 m-auto'>
                   <Link href={`/todos/${todo_list.id}`} key={todo_list.id}>
                     <div className='bg-slate-100 cursor-pointer flex flex-col justify-center items-start text-left h-full w-full p-6 rounded'>
-                      <h2 className='text-2xl text-gray-700 font-semibold'>
+                      <h2 className='text-2xl text-gray-700 font-bold'>
                         {todo_list.name}
                       </h2>
 
-                      <ul className='list-disc list-inside'>
+                      <ul className='list-none list-inside divide-y-2 divide-dotted divide-indigo-400 w-full py-2'>
                         {todos?.map((todo) =>
                           todo.todoListsId === todo_list.id
                             ? (count++,
                               (
-                                <li key={todo.id}>
-                                  {todo.name} ({todo.duration}min){' '}
-                                  {todo.isCompleted ? '✅' : '❌'}
+                                <li
+                                  className='flex flex-row justify-between py-1'
+                                  key={todo.id}
+                                >
+                                  <div>
+                                    {todo.isCompleted ? '✅' : '❌'}{' '}
+                                    <span className='font-semibold'>
+                                      {todo.name}
+                                    </span>
+                                  </div>
+                                  <div className='font-semibold'>
+                                    {todo.duration} min
+                                  </div>
                                 </li>
                               ))
                             : null

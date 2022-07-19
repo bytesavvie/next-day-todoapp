@@ -12,7 +12,7 @@ function NewTask({ todo_list_id }: { todo_list_id: string }) {
       title: 'Create a new task',
       html: `
         <div class="grid grid-cols-1 grid-rows-2 gap-3 mt-3 pt-3 w-full">
-          <div class="flex flex-col justify-center items-center text-center h-full w-full p-4">
+          <div class="">
           <label class="text-gray-700 font-semibold pb-2" for="name">Task name</label>
             <input
               class="text-gray-700 font-semibold rounded shadow-xl border-2 border-gray-500 p-2"
@@ -24,7 +24,7 @@ function NewTask({ todo_list_id }: { todo_list_id: string }) {
               id="name"
             />
           </div>
-          <div class="flex flex-col justify-center items-center text-center rounded shadow-xl border-2 border-gray-500 h-full w-full p-6">
+          <div class="flex flex-col justify-center items-center text-center h-full w-full p-4">
             <label class="text-gray-700 font-semibold pb-2" for="duration">Duration (in minutes)</label>
           <input
               class="text-gray-700 font-semibold rounded shadow-xl border-2 border-gray-500 p-2"

@@ -81,8 +81,8 @@ const Pomo = ({ ...props }) => {
         </button>
       </div>
       <div className='grid grid-cols-2 grid-rows-1 pb-4 w-full h-full divide-x overflow-hidden'>
-        <div className='flex flex-col justify-center items-center h-full w-full p-0 sm:p-3'>
-          <div className='flex flex-col justify-between items-center h-full w-full p-0 sm:p-4 max-h-48'>
+        <div className='flex flex-col justify-center items-center h-full w-full p-0 sm:p-2'>
+          <div className='flex flex-col justify-between items-center h-full w-full p-4 max-h-48'>
             {isAllTodosCompleted && (
               <div className='text-3xl font-semibold'>
                 <span className='text-indigo-500'>Great job</span>! You
@@ -92,13 +92,14 @@ const Pomo = ({ ...props }) => {
             )}
 
             {!selectedTodo?.isCompleted && (
-              <div>
-                <div className='text-2xl sm:text-3xl font-bold'>{todoName}</div>
-                <div className='text-4xl font-semibold py-2 sm:py-4'>
-                  {todoDurationString}
-                </div>
+              <div className='text-2xl sm:text-3xl font-bold'>{todoName}</div>
+            )}
+            {!selectedTodo?.isCompleted && (
+              <div className='text-3xl sm:text-4xl font-semibold'>
+                {todoDurationString}
               </div>
             )}
+
             {selectedTodo?.isCompleted && !isAllTodosCompleted && (
               <div className='text-4xl font-semibold'>Done!</div>
             )}
@@ -107,11 +108,11 @@ const Pomo = ({ ...props }) => {
                 className='bg-slate-400 hover:bg-rose-400 text-white font-bold py-2 px-4 rounded-full'
                 onClick={() => setIsPlaying(false)}
               >
-                <span className='text-xl'>Stop</span>
+                <span className='text-lg sm:text-xl'>Stop</span>
               </button>
             ) : (
               <button
-                className={`bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-5 rounded-full disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-indigo-500 ${
+                className={`bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-full disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-indigo-500 ${
                   isAllTodosCompleted && 'hidden'
                 }`}
                 onClick={() => setIsPlaying(true)}
@@ -122,15 +123,22 @@ const Pomo = ({ ...props }) => {
             )}
           </div>
         </div>
-        <div className='flex flex-col justify-start items-start h-full w-full p-0 pl-1 pr-2 divide-y max-h-64 overflow-auto'>
+        <div className='flex flex-col justify-start items-start h-full w-full p-0 pl-1 pr-4 divide-y max-h-64 overflow-auto'>
           {todos?.map((todo) => (
             <>
               <button
                 className={`cursor-pointer flex flex-row justify-start items-center h-full w-full p-1  rounded text-sm sm:text-lg text-gray-700 font-semibold ${
-                  selectedTodoId == todo.id &&
+                  selectedTodoId === todo.id &&
                   todo.isCompleted == false &&
                   'bg-indigo-200'
-                } ${
+                } 
+                
+                ${
+                  selectedTodoId !== todo.id &&
+                  todo.isCompleted === false &&
+                  'bg-gray-200'
+                }
+                ${
                   todo.isCompleted && 'bg-green-300'
                 } disabled:opacity-60 disabled:cursor-not-allowed`}
                 onClick={() => setSelectedTodoId(todo.id)}
@@ -141,10 +149,16 @@ const Pomo = ({ ...props }) => {
               </button>
               <button
                 className={`cursor-default text-sm sm:text-lg flex flex-row justify-start items-center h-full w-full p-1 rounded ${
-                  selectedTodoId == todo.id &&
-                  todo.isCompleted == false &&
+                  selectedTodoId === todo.id &&
+                  todo.isCompleted === false &&
                   'bg-rose-100'
-                } ${
+                } 
+                ${
+                  selectedTodoId !== todo.id &&
+                  todo.isCompleted === false &&
+                  'bg-gray-100'
+                }
+                ${
                   todo.isCompleted && 'bg-green-100'
                 } disabled:opacity-60 disabled:cursor-not-allowed`}
                 id={todo.id}

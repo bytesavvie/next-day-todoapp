@@ -32,7 +32,7 @@ function TodoList() {
           <title>Next Day | Lists</title>
           <link rel='icon' href='/favicon.ico' />
         </Head>
-        <div className='w-full h-screen flex flex-col justify-start items-center p-4'>
+        <div className='w-full h-full flex flex-col justify-start items-center p-4'>
           <Link href='/todos'>
             <a className='text-[3rem] lg:text-[5rem] md:text-[5rem] font-extrabold text-gray-700'>
               <span className='text-indigo-500'>Next</span> Day

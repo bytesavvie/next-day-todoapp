@@ -36,7 +36,7 @@ const Todo: NextPage = () => {
           <title>Next Day | {current_todo_list?.name}</title>
           <link rel='icon' href='/favicon.ico' />
         </Head>
-        <div className='w-full h-screen flex flex-col justify-start items-center p-4'>
+        <div className='w-full h-full flex flex-col justify-start items-center p-4'>
           {todo_list === null ? (
             <div>Loading ...</div>
           ) : (

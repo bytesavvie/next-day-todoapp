@@ -67,7 +67,7 @@ const Todo: NextPage = () => {
             ((count = 0),
             (
               <>
-                <div className='grid grid-cols-1 grid-rows-3 lg:grid-rows-1 md:grid-rows-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-3 mt-3 pt-3 w-full lg:w-3/4 md:w-full'>
+                <div className='grid grid-cols-1 grid-rows-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-3 mt-3 pt-3 w-full lg:w-3/4 md:w-full'>
                   {todos.map(
                     (todo) => (
                       count++,

@@ -12,7 +12,7 @@ const Home: NextPage = () => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <div className='w-full h-full flex flex-col justify-start md:justify-center items-center p-4'>
+      <div className='w-full h-screen flex flex-col justify-start md:justify-center items-center p-4'>
         <Link href='/'>
           <a className='text-[3rem] lg:text-[5rem] md:text-[5rem] font-extrabold text-gray-700'>
             <span className='text-indigo-500'>Next</span> Day
@@ -21,7 +21,7 @@ const Home: NextPage = () => {
         <p className='text-2xl text-gray-700'>
           Crate List of Tasks and Get Stuff Done
         </p>
-        <div className='grid grid-cols-1 grid-rows-3 lg:grid-rows-1 md:grid-rows-1 lg:grid-cols-3 md:grid-cols-3 gap-3 mt-3 pt-3 w-full lg:w-2/3 md:w-full'>
+        <div className='grid grid-cols-1 grid-rows-3 lg:grid-rows-1 md:grid-rows-1 lg:grid-cols-3 md:grid-cols-3 gap-3 mt-3 pt-3 w-full lg:w-2/3 md:w-full pb-4'>
           <div className='hover:scale-105 duration-500 flex flex-col justify-center items-center text-center rounded shadow-xl border-2 border-gray-500 h-full w-11/12 p-6 m-auto'>
             <h2 className='text-lg text-gray-700 font-semibold'>ToDo List</h2>
             <p className='text-sm text-gray-600'>

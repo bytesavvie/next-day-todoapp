@@ -10,10 +10,10 @@ function EditTask({ ...props }) {
       title: 'Edit task',
       html: `
         <div class="grid grid-cols-1 grid-rows-2 gap-3 mt-3 pt-3 w-full">
-          <div class="flex flex-col justify-center items-center text-center rounded shadow-xl border-2 border-gray-500 h-full w-full p-6">
-          <label class="text-gray-700 font-semibold" for="name">Task name</label>
+          <div class="flex flex-col justify-center items-center text-center h-full w-full p-4">
+          <label class="text-gray-700 font-semibold pb-2" for="name">Task name</label>
             <input
-              class="text-gray-700 font-semibold"
+              class="text-gray-700 font-semibold rounded shadow-xl border-2 border-gray-500 p-2"
               type="text"
               placeholder="Task name"
               aria-label="Task name"
@@ -23,10 +23,10 @@ function EditTask({ ...props }) {
               id="name"
             />
           </div>
-          <div class="flex flex-col justify-center items-center text-center rounded shadow-xl border-2 border-gray-500 h-full w-full p-6">
-            <label class="text-gray-700 font-semibold" for="duration">Duration (in minutes)</label>
+          <div class="flex flex-col justify-center items-center text-center h-full w-full p-4">
+            <label class="text-gray-700 font-semibold pb-2" for="duration">Duration (in minutes)</label>
           <input
-              class="text-gray-700 font-semibold"
+              class="text-gray-700 font-semibold rounded shadow-xl border-2 border-gray-500 p-2"
               type="number"
               placeholder="Duration"
               aria-label="Duration"

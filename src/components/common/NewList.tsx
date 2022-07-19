@@ -12,9 +12,10 @@ function NewList() {
       title: 'Create a new list',
       html: `
         <div class="grid grid-cols-1 grid-rows-1 gap-3 mt-3 pt-3 w-full">
-          <div class="flex flex-col justify-center items-center text-center rounded shadow-xl border-2 border-gray-500 h-full w-full p-6">
-            <input
-              class="text-gray-700 font-semibold"
+          <div class="flex flex-col justify-center items-center text-center h-full w-full p-4">
+          <label class="text-gray-700 font-semibold pb-2" for="name">List name</label>  
+          <input
+              class="text-gray-700 font-semibold rounded shadow-xl border-2 border-gray-500 p-2"
               type="text"
               placeholder="List name"
               aria-label="List name"

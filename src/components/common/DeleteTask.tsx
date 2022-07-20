@@ -21,7 +21,7 @@ function DeleteTask({ taskId }: { taskId: string }) {
   return (
     <div>
       <button onClick={deleteTask}>
-        <div className='hover:scale-105 duration-500 cursor-pointer flex flex-col justify-center items-center text-center rounded shadow-xl border-2 border-gray-500 p-2'>
+        <div className='hover:scale-105 duration-100 cursor-pointer flex flex-col justify-center items-center text-center rounded shadow-xl border-2 border-gray-500 p-2'>
           <h2 className='text-sm text-gray-700 font-semibold'>
             <span role='img' aria-label='trash'>
               🗑

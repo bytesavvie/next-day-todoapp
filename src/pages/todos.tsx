@@ -8,7 +8,7 @@ const Todos: NextPage = () => {
     <ThinBackend>
       <Head>
         <title>Next Day</title>
-        <meta name='description' content='Create ToDo list and manage it' />
+        <meta name='description' content='Create To Do list and manage it' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <TodoList />

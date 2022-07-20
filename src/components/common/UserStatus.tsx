@@ -33,7 +33,10 @@ const UserStatus = () => {
   if (isLoggedIn === false) {
     return (
       <>
-        <p>Sign in to your account.</p>
+        <p className='pt-4'>
+          <span className='font-semibold'>Sign in</span> to your account or
+          <span className='font-semibold'> create a new one.</span>
+        </p>
         <div className='flex flex-row justify-center items-center mt-3'>
           <SignInBtn />
         </div>

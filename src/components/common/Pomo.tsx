@@ -81,20 +81,33 @@ const Pomo = ({ ...props }) => {
         </button>
       </div>
       <div className='grid grid-cols-2 grid-rows-1 pb-4 w-full h-full divide-x overflow-hidden'>
-        <div className='flex flex-col justify-center items-center h-full w-full p-0 sm:p-2'>
-          <div className='flex flex-col justify-between items-center h-full w-full p-4 max-h-48'>
-            {isAllTodosCompleted && (
-              <div className='text-3xl font-semibold'>
-                <span className='text-indigo-500'>Great job</span>! You
-                completed all your{' '}
+        <div className='flex flex-col justify-center items-center h-full w-full'>
+          <div className='flex flex-col justify-between items-center h-36 w-full'>
+            {props.count === 0 && (
+              <div className='text-2xl font-semibold'>
+                You don&apos;t have any todos yet.{' '}
+                <span className='text-indigo-500'>
+                  Click on a list to add them
+                </span>
+                .
+              </div>
+            )}
+            {isAllTodosCompleted && props.count > 0 && (
+              <div className='text-2xl font-semibold'>
+                <span className='text-indigo-500'>Great job</span>!
+                <br />
+                <span>You completed all your </span>
                 <span className='text-indigo-500'>tasks</span>!
+                <br />
+                <br />
+                <span className='text-lg'>Get some rest 😌</span>
               </div>
             )}
 
             {!selectedTodo?.isCompleted && (
               <div className='text-2xl sm:text-3xl font-bold'>{todoName}</div>
             )}
-            {!selectedTodo?.isCompleted && (
+            {!selectedTodo?.isCompleted && props.count > 0 && (
               <div className='text-3xl sm:text-4xl font-semibold'>
                 {todoDurationString}
               </div>

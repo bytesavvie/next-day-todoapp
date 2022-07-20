@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { query } from 'thin-backend';
-import { useQuery, useIsLoggedIn } from 'thin-backend-react';
+import { useQuery, useIsLoggedIn, ThinBackend } from 'thin-backend-react';
 import DeleteTask from '../../components/common/DeleteTask';
 import EditTask from '../../components/common/EditTask';
 import NewTask from '../../components/common/NewTask';
@@ -31,7 +31,7 @@ const Todo: NextPage = () => {
 
   return (
     (isLoggedIn && (
-      <div>
+      <ThinBackend>
         <Head>
           <title>Next Day | {current_todo_list?.name}</title>
           <link rel='icon' href='/favicon.ico' />
@@ -117,7 +117,7 @@ const Todo: NextPage = () => {
             </a>
           </Link>
         </div>
-      </div>
+      </ThinBackend>
     )) || <></>
   );
 };

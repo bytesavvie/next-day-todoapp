@@ -25,6 +25,31 @@ function TodoList() {
 
   let count = 0;
 
+  let duration = 0;
+
+  // if duration >= 60 return 'hh:mm hrs' with leading zero else return 'mm:ss min' with leading zero
+  const formatTotalDuration = (totalDuration: number) => {
+    if (totalDuration >= 60) {
+      const hours = Math.floor(totalDuration / 60);
+      const minutes = totalDuration % 60;
+      if (hours === 1) {
+        return `${hours < 10 ? `0${hours}` : hours}:${
+          minutes < 10 ? `0${minutes}` : minutes
+        } hr`;
+      } else {
+        return `${hours < 10 ? `0${hours}` : hours}:${
+          minutes < 10 ? `0${minutes}` : minutes
+        } hrs`;
+      }
+    } else {
+      const minutes = Math.floor(totalDuration / 60);
+      const seconds = totalDuration % 60;
+      return `${minutes < 10 ? `0${minutes}` : minutes}:${
+        seconds < 10 ? `0${seconds}` : seconds
+      } min`;
+    }
+  };
+
   return (
     (isLoggedIn && (
       <div>
@@ -43,14 +68,15 @@ function TodoList() {
             Task Lists:
           </h3>
 
-          <div className='grid grid-cols-1 grid-rows-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-3 mt-3 pt-3 w-full lg:w-3/4 md:w-full'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-3 mt-3 pt-3 w-full lg:w-3/4 md:w-full'>
             {todo_lists?.map(
               (todo_list) => (
                 (count = 0),
+                (duration = 0),
                 (
-                  <div className='flex flex-col justify-center items-center rounded shadow-xl border-2 border-gray-500 h-full w-11/12 p-1 m-auto'>
+                  <div className='flex flex-col justify-center items-center rounded shadow-xl border-2 border-gray-500 h-fit w-11/12 p-1 m-auto'>
                     <Link href={`/todos/${todo_list.id}`} key={todo_list.id}>
-                      <div className='bg-slate-100 cursor-pointer flex flex-col justify-center items-start text-left h-full w-full p-6 rounded'>
+                      <div className='bg-slate-100 cursor-pointer flex flex-col justify-center items-start text-left h-full w-full p-6 pb-0 rounded'>
                         <h2 className='text-2xl text-gray-700 font-bold'>
                           {todo_list.name}
                         </h2>
@@ -59,6 +85,7 @@ function TodoList() {
                           {todos?.map((todo) =>
                             todo.todoListsId === todo_list.id
                               ? (count++,
+                                (duration += todo.duration),
                                 (
                                   <li
                                     className='flex flex-row justify-between py-1'
@@ -77,13 +104,24 @@ function TodoList() {
                                 ))
                               : null
                           )}
+                          {duration > 0 ? (
+                            <div className='flex flex-row justify-center text-xl text-gray-700 pt-2'>
+                              <div className='font-bold'>
+                                <span className='text-indigo-500'>Time:</span>{' '}
+                                <span className='font-semibold'>
+                                  {formatTotalDuration(duration)}
+                                </span>
+                              </div>
+                            </div>
+                          ) : null}
                         </ul>
+
                         {count === 0 ? <p>The list is empty.</p> : null}
                       </div>
                     </Link>
                     <div className='flex flex-row justify-between items-center h-full w-full p-1'>
                       <div className='flex flex-row justify-start gap-2'>
-                        <PlayPomo id={todo_list.id} />
+                        <PlayPomo id={todo_list.id} count={count} />
                         <ResetPomo id={todo_list.id} />
                       </div>
                       <div className='flex flex-row justify-end gap-2'>

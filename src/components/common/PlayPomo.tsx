@@ -24,7 +24,7 @@ const PlayPomo = ({ ...props }) => {
             <span role='img' aria-label='tomato'>
               🍅
             </span>{' '}
-            Pomo
+            <span>Pomo</span>
           </h2>
         </div>
       </button>

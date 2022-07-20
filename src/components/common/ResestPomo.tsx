@@ -44,7 +44,7 @@ const ResetPomo = ({ ...props }) => {
             <span role='img' aria-label='reset'>
               🔄
             </span>{' '}
-            Reset
+            <span className='hidden sm:inline'>Reset</span>
           </h2>
         </div>
       </button>

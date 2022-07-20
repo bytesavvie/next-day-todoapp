@@ -64,9 +64,14 @@ function TodoList() {
             </a>
           </Link>
           <UserStatus />
-          <h3 className='text-[2rem] lg:text-[3rem] md:text-[3rem] font-extrabold text-gray-700 w-full lg:w-2/3 '>
-            Task Lists:
-          </h3>
+          <div className='flex flex-row justify-center items-center w-full lg:w-3/4 md:w-full mt-4 '>
+            <div className='flex flex-row justify-between items-center w-11/12 py-2 m-auto border-b-2 border-gray-300'>
+              <h3 className='text-[2rem] lg:text-[3rem] md:text-[3rem] font-extrabold text-gray-700'>
+                Task Lists:
+              </h3>
+              <NewList />
+            </div>
+          </div>
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-3 mt-3 pt-3 w-full lg:w-3/4 md:w-full'>
             {todo_lists?.map(
@@ -136,7 +141,6 @@ function TodoList() {
                 )
               )
             )}
-            <NewList />
           </div>
           <Link href='/'>
             <a className='text-base text-violet-600 underline decoration-dotted underline-offset-2 cursor-pointer py-4'>

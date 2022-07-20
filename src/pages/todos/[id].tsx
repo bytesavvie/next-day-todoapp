@@ -56,10 +56,14 @@ const Todo: NextPage = () => {
               </>
             ))
           )}
-
-          <h3 className='text-[2rem] lg:text-[3rem] md:text-[3rem] font-extrabold text-gray-700 w-full lg:w-2/3 md:w-full mt-3'>
-            Tasks:
-          </h3>
+          <div className='flex flex-row justify-center items-center w-full lg:w-3/4 md:w-full mt-4'>
+            <div className='flex flex-row justify-between items-center w-11/12 py-2 m-auto border-b-2 border-gray-300'>
+              <h3 className='text-[2rem] lg:text-[3rem] md:text-[3rem] font-extrabold text-gray-700'>
+                Tasks:
+              </h3>
+              <NewTask todo_list_id={todo_list_id!} />
+            </div>
+          </div>
 
           {todos === null ? (
             <div>Loading ...</div>
@@ -104,7 +108,6 @@ const Todo: NextPage = () => {
                       )
                     )
                   )}
-                  <NewTask todo_list_id={todo_list_id!} />
                 </div>
                 {count === 0 ? <p>The list is empty.</p> : null}
               </>

@@ -21,7 +21,7 @@ const Home: NextPage = () => {
         <p className='text-2xl text-gray-700'>
           Crate a To Do list and get stuff done.
         </p>
-        <div className='grid grid-cols-1 grid-rows-3 lg:grid-rows-1 md:grid-rows-1 lg:grid-cols-3 md:grid-cols-3 gap-2 w-full  md:w-full py-8 my-8 bg-indigo-100'>
+        <div className='grid grid-cols-1 grid-rows-3 lg:grid-rows-1 md:grid-rows-1 lg:grid-cols-3 md:grid-cols-3 gap-2 w-full  md:w-full py-8 my-8 bg-indigo-100 lg:px-8 xl:px-56'>
           <div className='hover:shadow-xl duration-200 flex flex-col justify-center items-center text-center rounded shadow-md border border-gray-300 h-full w-11/12 p-6 m-auto bg-white'>
             <h2 className='text-xl text-gray-700 font-bold'>
               Start Your Day Here

@@ -84,7 +84,7 @@ const Todo: NextPage = () => {
                             <h2 className='text-3xl text-gray-700 font-bold underline underline-offset-4 decoration-indigo-400 decoration-dashed'>
                               {todo.name}
                             </h2>
-                            <ul className='list-none list-inside pl-'>
+                            <ul className='list-none list-inside pt-2'>
                               <li>
                                 Duration:{' '}
                                 <span className='font-semibold'>

@@ -38,7 +38,7 @@ const ResetPomo = ({ ...props }) => {
   return (
     <div>
       <button onClick={resetPomo}>
-        <div className='hover:scale-105 duration-100 cursor-pointer flex flex-col justify-center items-center text-center rounded shadow-xl border-2 border-gray-500 p-2'>
+        <div className='bg-gray-50 hover:scale-105 duration-100 cursor-pointer flex flex-col justify-center items-center text-center rounded shadow-sm border-2 border-gray-200 hover:border-blue-300 p-2'>
           <h2 className='text-sm text-gray-700 font-bold'>
             {/* reset emoji */}
             <span role='img' aria-label='reset'>

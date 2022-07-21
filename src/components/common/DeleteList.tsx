@@ -21,7 +21,7 @@ function DeleteList({ listId }: { listId: string }) {
   return (
     <div>
       <button onClick={deleteTodoList}>
-        <div className='hover:scale-105 duration-100 cursor-pointer flex flex-col justify-center items-center text-center rounded shadow-xl border-2 border-gray-500 p-2'>
+        <div className='hover:scale-105 duration-100 cursor-pointer flex flex-col justify-center items-center text-center rounded shadow-sm border-2 border-gray-300 hover:border-gray-400 p-2'>
           <h2 className='text-sm text-gray-700 font-semibold'>
             <span role='img' aria-label='trash'>
               🗑

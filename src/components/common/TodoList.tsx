@@ -79,9 +79,9 @@ function TodoList() {
                 (count = 0),
                 (duration = 0),
                 (
-                  <div className='flex flex-col justify-center items-center rounded shadow-xl border-2 border-gray-500 h-fit w-11/12 p-1 m-auto'>
+                  <div className='flex flex-col justify-center items-center rounded shadow-sm hover:shadow-md border border-gray-300 h-fit w-11/12 p-1 m-auto'>
                     <Link href={`/todos/${todo_list.id}`} key={todo_list.id}>
-                      <div className='bg-slate-100 cursor-pointer flex flex-col justify-center items-start text-left h-full w-full p-6 pb-0 rounded'>
+                      <div className='bg-neutral-100 cursor-pointer flex flex-col justify-center items-start text-left h-full w-full p-6 pb-0 rounded'>
                         <h2 className='text-2xl text-gray-700 font-bold'>
                           {todo_list.name}
                         </h2>
@@ -121,7 +121,9 @@ function TodoList() {
                           ) : null}
                         </ul>
 
-                        {count === 0 ? <p>The list is empty.</p> : null}
+                        {count === 0 ? (
+                          <p className='pb-2'>The list is empty.</p>
+                        ) : null}
                       </div>
                     </Link>
                     <div className='flex flex-row justify-between items-center h-full w-full p-1'>

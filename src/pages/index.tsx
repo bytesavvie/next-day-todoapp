@@ -30,7 +30,7 @@ const Home: NextPage = () => {
               Next Day gives you focus, from work to play. Try it out today.
             </p>
             <Link href='/todos'>
-              <button className='bg-indigo-600 hover:bg-indigo-400 text-white font-bold py-2 px-6 rounded-full mt-3'>
+              <button className='bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2 px-6 rounded-full mt-3'>
                 Get started
               </button>
             </Link>

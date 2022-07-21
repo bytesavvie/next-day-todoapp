@@ -64,8 +64,9 @@ function TodoList() {
             </a>
           </Link>
           <UserStatus />
-          <div className='flex flex-row justify-center items-center w-full lg:w-3/4 md:w-full mt-4 '>
-            <div className='flex flex-row justify-between items-center w-11/12 py-2 m-auto border-b-2 border-gray-300'>
+
+          <div className='flex flex-row justify-center items-center w-full lg:w-3/4 md:w-full py-4 m-auto'>
+            <div className='flex flex-row justify-between items-center w-full border-b-2 border-gray-300'>
               <h3 className='text-[2rem] lg:text-[3rem] md:text-[3rem] font-extrabold text-gray-700'>
                 Task Lists:
               </h3>

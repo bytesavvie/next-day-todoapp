@@ -82,7 +82,7 @@ function NewTask({ todo_list_id }: { todo_list_id: string }) {
         <h2 className='text-base sm:text-xl text-gray-700 font-semibold'>
           {/* small plus emoji then Add New List */}
           <span role='img' aria-label='plus'>
-            📝
+            📝{' '}
           </span>
           <span className='hidden sm:inline-block'>Add</span> New
         </h2>

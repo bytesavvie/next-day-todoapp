@@ -53,11 +53,11 @@ function NewList() {
       className='flex flex-col items-start justify-start'
       onClick={addTodoList}
     >
-      <div className='cursor-pointer flex flex-col justify-center items-center text-center rounded border-[3px] border-indigo-100 hover:bg-indigo-100 hover:shadow-lg duration-75 h-1/8 w-full p-2'>
+      <div className='cursor-pointer flex flex-col justify-center items-center text-center rounded border-[3px] border-indigo-100 hover:bg-indigo-100 hover:shadow-lg duration-75 h-1/8 w-full p-2 my-2'>
         <h2 className='text-base sm:text-xl text-gray-700 font-semibold'>
           {/* small plus emoji then Add New List */}
           <span role='img' aria-label='plus'>
-            📝
+            📝{' '}
           </span>
           <span className='hidden sm:inline-block'>Add</span> New
         </h2>

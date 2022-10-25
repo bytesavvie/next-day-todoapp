@@ -58,10 +58,11 @@ function TodoList() {
           <link rel='icon' href='/favicon.ico' />
         </Head>
         <div className='w-full h-full flex flex-col justify-start items-center p-4'>
-          <Link href='/todos'>
-            <a className='text-[3rem] lg:text-[5rem] md:text-[5rem] font-extrabold text-gray-700'>
-              <span className='text-indigo-500'>Next</span> Day
-            </a>
+          <Link
+            href='/todos'
+            className='text-[3rem] lg:text-[5rem] md:text-[5rem] font-extrabold text-gray-700'
+          >
+            <span className='text-indigo-500'>Next</span> Day
           </Link>
           <UserStatus />
 
@@ -145,10 +146,11 @@ function TodoList() {
               )
             )}
           </div>
-          <Link href='/'>
-            <a className='text-base text-violet-600 underline decoration-dotted underline-offset-2 cursor-pointer py-4'>
-              Go Home 🏠
-            </a>
+          <Link
+            href='/'
+            className='text-base text-violet-600 underline decoration-dotted underline-offset-2 cursor-pointer py-4'
+          >
+            Go Home 🏠
           </Link>
         </div>
       </div>
@@ -163,16 +165,18 @@ function TodoList() {
           <link rel='icon' href='/favicon.ico' />
         </Head>
         <div className='w-screen h-screen flex flex-col justify-center items-center p-4'>
-          <Link href='/todos'>
-            <a className='text-[3rem] lg:text-[5rem] md:text-[5rem] font-extrabold text-gray-700'>
-              <span className='text-indigo-500'>Next</span> Day
-            </a>
+          <Link
+            href='/todos'
+            className='text-[3rem] lg:text-[5rem] md:text-[5rem] font-extrabold text-gray-700'
+          >
+            <span className='text-indigo-500'>Next</span> Day
           </Link>
           <UserStatus />
-          <Link href='/'>
-            <a className='text-base text-violet-600 underline decoration-dotted underline-offset-2 cursor-pointer py-4'>
-              Go Home 🏠
-            </a>
+          <Link
+            href='/'
+            className='text-base text-violet-600 underline decoration-dotted underline-offset-2 cursor-pointer py-4'
+          >
+            Go Home 🏠
           </Link>
         </div>
       </div>

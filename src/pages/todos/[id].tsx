@@ -42,10 +42,11 @@ const Todo: NextPage = () => {
           ) : (
             todo_list.map((todo_list) => (
               <>
-                <Link href='/todos'>
-                  <a className='text-[3rem] lg:text-[5rem] md:text-[5rem] font-extrabold text-gray-700'>
-                    <span className='text-indigo-500'>Next</span> Day
-                  </a>
+                <Link
+                  href='/todos'
+                  className='text-[3rem] lg:text-[5rem] md:text-[5rem] font-extrabold text-gray-700'
+                >
+                  <span className='text-indigo-500'>Next</span> Day
                 </Link>
                 <h1
                   className='text-[3rem] lg:text-[5rem] md:text-[5rem] font-extrabold text-gray-700'
@@ -114,10 +115,11 @@ const Todo: NextPage = () => {
             ))
           )}
 
-          <Link href='/todos'>
-            <a className='text-base text-violet-600 underline decoration-dotted underline-offset-2 cursor-pointer py-4'>
-              Go Back To Lists ⬅️
-            </a>
+          <Link
+            href='/todos'
+            className='text-base text-violet-600 underline decoration-dotted underline-offset-2 cursor-pointer py-4'
+          >
+            Go Back To Lists ⬅️
           </Link>
         </div>
       </ThinBackend>

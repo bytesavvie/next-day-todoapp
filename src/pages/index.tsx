@@ -13,10 +13,11 @@ const Home: NextPage = () => {
       </Head>
 
       <div className='w-full h-full sm:h-screen flex flex-col justify-center items-center px-0 py-4'>
-        <Link href='/'>
-          <a className='text-[3rem] lg:text-[5rem] md:text-[5rem] font-extrabold text-gray-700'>
-            <span className='text-indigo-500'>Next</span> Day
-          </a>
+        <Link
+          href='/'
+          className='text-[3rem] lg:text-[5rem] md:text-[5rem] font-extrabold text-gray-700'
+        >
+          <span className='text-indigo-500'>Next</span> Day
         </Link>
         <p className='text-2xl text-gray-700'>
           Crate a To Do list and get stuff done.
@@ -41,10 +42,11 @@ const Home: NextPage = () => {
               Create a list of tasks for the day and get them done. You can add
               tasks, delete tasks, and mark tasks as done.
             </p>
-            <Link href='/habits'>
-              <a className='text-sm text-violet-600 underline decoration-dotted underline-offset-2 cursor-pointer mt-3'>
-                Read about making good habits
-              </a>
+            <Link
+              href='/habits'
+              className='text-sm text-violet-600 underline decoration-dotted underline-offset-2 cursor-pointer mt-3'
+            >
+              Read about making good habits
             </Link>
           </div>
           <div className='hover:shadow-xl duration-200 flex flex-col justify-center items-center text-center rounded  shadow-md border border-gray-300 h-full w-11/12 p-6 m-auto bg-white'>
@@ -53,10 +55,11 @@ const Home: NextPage = () => {
               A simple pomodoro technique used on every task in the List. Great
               for getting things done. Manage your time better.
             </p>
-            <Link href='/pomodoro'>
-              <a className='text-sm text-violet-600 underline decoration-dotted underline-offset-2 cursor-pointer mt-3'>
-                Read about Pomodoro technique
-              </a>
+            <Link
+              href='/pomodoro'
+              className='text-sm text-violet-600 underline decoration-dotted underline-offset-2 cursor-pointer mt-3'
+            >
+              Read about Pomodoro technique
             </Link>
           </div>
         </div>

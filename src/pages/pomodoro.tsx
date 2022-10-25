@@ -10,10 +10,11 @@ const Pomodoro: NextPage = () => {
         <meta name='description' content='About Pomodoro Technique' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <Link href='/'>
-        <a className='text-[3rem] lg:text-[5rem] md:text-[5rem] font-extrabold text-gray-700'>
-          <span className='text-indigo-500'>Next</span> Day
-        </a>
+      <Link
+        href='/'
+        className='text-[3rem] lg:text-[5rem] md:text-[5rem] font-extrabold text-gray-700'
+      >
+        <span className='text-indigo-500'>Next</span> Day
       </Link>
       <h3 className='text-[1.75rem] lg:text-[2rem] md:text-[2rem] font-extrabold text-gray-700 w-full lg:w-2/3 md:w-full pt-8'>
         Pomodoro Technique
@@ -49,10 +50,11 @@ const Pomodoro: NextPage = () => {
           <strong>Take a longer break</strong> for 15 to 30 minutes.
         </li>
       </ol>
-      <Link href='/'>
-        <a className='text-base text-violet-600 underline decoration-dotted underline-offset-2 cursor-pointer py-4'>
-          Go Home 🏠
-        </a>
+      <Link
+        href='/'
+        className='text-base text-violet-600 underline decoration-dotted underline-offset-2 cursor-pointer py-4'
+      >
+        Go Home 🏠
       </Link>
     </div>
   );

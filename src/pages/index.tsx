@@ -1,11 +1,11 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-// import { ThinBackend } from 'thin-backend-react';
+import { ThinBackend } from 'thin-backend-react';
 
 const Home: NextPage = () => {
   return (
-    <>
+    <ThinBackend>
       <Head>
         <title>Next Day</title>
         <meta name='description' content='Create To Do list and manage it' />
@@ -64,7 +64,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
-    </>
+    </ThinBackend>
   );
 };
 

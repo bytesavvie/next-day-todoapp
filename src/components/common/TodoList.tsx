@@ -80,7 +80,7 @@ function TodoList() {
           <div className='grid w-full grid-cols-1 gap-3 px-8 pt-3 mt-3 sm:px-32 xl:px-64 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 md:w-full'>
             {todo_lists?.map(
               (todo_list) => (
-                (count = 0),
+                count++,
                 (duration = 0),
                 (
                   <div className='flex flex-col items-center justify-center w-full p-1 m-auto border border-gray-300 rounded shadow-sm hover:shadow-md h-fit'>
@@ -96,8 +96,7 @@ function TodoList() {
                       <ul className='w-full py-2 list-none list-inside divide-y-2 divide-indigo-400 divide-dotted'>
                         {todos?.map((todo) =>
                           todo.todoListsId === todo_list.id
-                            ? (count++,
-                              (duration += todo.duration),
+                            ? ((duration += todo.duration),
                               (
                                 <li
                                   className='flex flex-row justify-between py-1'
@@ -127,10 +126,6 @@ function TodoList() {
                           </div>
                         ) : null}
                       </ul>
-
-                      {count === 0 ? (
-                        <p className='pb-2'>The list is empty.</p>
-                      ) : null}
                     </Link>
                     <div className='flex flex-row items-center justify-between w-full h-full p-1'>
                       <div className='flex flex-row justify-start gap-2'>
@@ -149,6 +144,9 @@ function TodoList() {
                 )
               )
             )}
+            {count === 0 ? (
+              <p className='col-span-3 pb-2 text-center'>The list is empty.</p>
+            ) : null}
           </div>
           <GoHomeBtn />
         </div>

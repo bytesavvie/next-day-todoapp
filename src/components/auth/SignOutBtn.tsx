@@ -15,7 +15,7 @@ const SignOutBtn = () => {
     <button
       onClick={() => doLogOut()}
       disabled={isLoading}
-      className='bg-indigo-700 hover:bg-indigo-500 text-white font-bold py-2 px-4 rounded-full mt-3'
+      className='px-4 py-2 font-bold text-white bg-indigo-700 rounded-full hover:bg-indigo-500'
     >
       Sign out
     </button>

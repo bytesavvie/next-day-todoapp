@@ -75,14 +75,14 @@ const Pomo = ({ ...props }) => {
       <div className='flex flex-row justify-end'>
         <button
           onClick={() => Swal.close()}
-          className='bg-slate-400 hover:bg-rose-400 text-white font-bold rounded-full w-7 h-7 text-xs mt-1 mb-4 mr-1'
+          className='mt-1 mb-4 mr-1 text-xs font-bold text-white rounded-full bg-slate-400 hover:bg-rose-400 w-7 h-7'
         >
           X
         </button>
       </div>
-      <div className='grid grid-cols-2 grid-rows-1 pb-4 w-full h-full divide-x overflow-hidden'>
-        <div className='flex flex-col justify-center items-center h-full w-full'>
-          <div className='flex flex-col justify-between items-center h-36 w-full'>
+      <div className='grid w-full h-full grid-cols-2 grid-rows-1 pb-4 overflow-hidden divide-x'>
+        <div className='flex flex-col items-center justify-center w-full h-full'>
+          <div className='flex flex-col items-center justify-between w-full h-36'>
             {props.count === 0 && (
               <div className='text-2xl font-semibold'>
                 You don&apos;t have any todos yet.{' '}
@@ -105,10 +105,10 @@ const Pomo = ({ ...props }) => {
             )}
 
             {!selectedTodo?.isCompleted && (
-              <div className='text-2xl sm:text-3xl font-bold'>{todoName}</div>
+              <div className='text-2xl font-bold sm:text-3xl'>{todoName}</div>
             )}
             {!selectedTodo?.isCompleted && props.count > 0 && (
-              <div className='text-3xl sm:text-4xl font-semibold'>
+              <div className='text-3xl font-semibold sm:text-4xl'>
                 {todoDurationString}
               </div>
             )}
@@ -118,7 +118,7 @@ const Pomo = ({ ...props }) => {
             )}
             {isPlaying ? (
               <button
-                className='bg-slate-400 hover:bg-rose-400 text-white font-bold py-2 px-4 rounded-full'
+                className='px-4 py-2 font-bold text-white rounded-full bg-slate-400 hover:bg-rose-400'
                 onClick={() => setIsPlaying(false)}
               >
                 <span className='text-lg sm:text-xl'>Stop</span>
@@ -136,7 +136,7 @@ const Pomo = ({ ...props }) => {
             )}
           </div>
         </div>
-        <div className='flex flex-col justify-start items-start h-full w-full p-0 pl-1 pr-4 divide-y max-h-64 overflow-auto'>
+        <div className='flex flex-col items-start justify-start w-full h-full p-0 pl-1 pr-4 overflow-auto divide-y max-h-64'>
           {todos?.map((todo) => (
             <>
               <button

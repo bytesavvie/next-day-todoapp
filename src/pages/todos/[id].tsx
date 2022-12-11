@@ -36,7 +36,7 @@ const Todo: NextPage = () => {
           <title>Next Day | {current_todo_list?.name}</title>
           <link rel='icon' href='/favicon.ico' />
         </Head>
-        <div className='w-full h-full flex flex-col justify-start items-center p-4'>
+        <div className='flex flex-col items-center justify-between w-full h-full min-h-screen p-4'>
           {todo_list === null ? (
             <div>Loading ...</div>
           ) : (
@@ -57,8 +57,8 @@ const Todo: NextPage = () => {
               </>
             ))
           )}
-          <div className='flex flex-row justify-center items-center w-full lg:w-3/4 md:w-full py-4 m-auto'>
-            <div className='flex flex-row justify-between items-center w-full border-b-2 border-gray-300'>
+          <div className='flex flex-row items-center justify-center w-full px-8 py-4 sm:px-32 xl:px-64'>
+            <div className='flex flex-row items-center justify-between w-full border-b-2 border-gray-300'>
               <h3 className='text-[2rem] lg:text-[3rem] md:text-[3rem] font-extrabold text-gray-700'>
                 Tasks:
               </h3>
@@ -72,20 +72,20 @@ const Todo: NextPage = () => {
             ((count = 0),
             (
               <>
-                <div className='grid grid-cols-1 grid-rows-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-3 mt-3 pt-3 w-full lg:w-3/4 md:w-full'>
+                <div className='grid w-full grid-cols-1 grid-rows-2 gap-3 px-8 pt-3 mt-3 sm:px-32 xl:px-64 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3'>
                   {todos.map(
                     (todo) => (
                       count++,
                       (
-                        <div className='flex flex-col rounded shadow-sm hover:shadow-md border border-gray-300 h-full w-11/12 p-1 m-auto'>
+                        <div className='flex flex-col w-full h-full p-1 m-auto border border-gray-300 rounded shadow-sm hover:shadow-md'>
                           <div
-                            className='bg-neutral-100 flex flex-col justify-center items-start text-left h-full w-full p-6 rounded '
+                            className='flex flex-col items-start justify-center w-full h-full p-6 text-left rounded bg-neutral-100 '
                             key={todo.id}
                           >
-                            <h2 className='text-3xl text-gray-700 font-bold underline underline-offset-4 decoration-indigo-400 decoration-dashed'>
+                            <h2 className='text-3xl font-bold text-gray-700 underline underline-offset-4 decoration-indigo-400 decoration-dashed'>
                               {todo.name}
                             </h2>
-                            <ul className='list-none list-inside pt-2'>
+                            <ul className='pt-2 list-none list-inside'>
                               <li>
                                 Duration:{' '}
                                 <span className='font-semibold'>
@@ -97,7 +97,7 @@ const Todo: NextPage = () => {
                               </li>
                             </ul>
                           </div>
-                          <div className='flex flex-row justify-end gap-2 items-center h-full w-full p-1'>
+                          <div className='flex flex-row items-center justify-end w-full h-full gap-2 p-1'>
                             <EditTask
                               id={todo.id}
                               name={todo.name.replace(/ /g, '\u00a0')}
@@ -117,9 +117,9 @@ const Todo: NextPage = () => {
 
           <Link
             href='/todos'
-            className='text-base text-violet-600 underline decoration-dotted underline-offset-2 cursor-pointer py-4'
+            className='px-4 py-2 my-4 text-xl font-bold text-white bg-indigo-600 rounded-full cursor-pointer hover:bg-indigo-500 focus:outline-none focus:shadow-outline'
           >
-            Go Back To Lists ⬅️
+            Back To Lists ⬅️
           </Link>
         </div>
       </ThinBackend>

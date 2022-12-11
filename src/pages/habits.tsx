@@ -1,26 +1,22 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Link from 'next/link';
+import LogoHomeBtn from '../components/common/LogoHomeBtn';
+import GoHomeBtn from '../components/common/GoHomeBtn';
 
 const Habits: NextPage = () => {
   return (
-    <div className='w-full h-full flex flex-col justify-start items-center p-4'>
+    <div className='flex flex-col items-center justify-start w-full h-full p-4'>
       <Head>
         <title>Making Good Habits</title>
         <meta name='description' content='About making good habits' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <Link
-        href='/'
-        className='text-[3rem] lg:text-[5rem] md:text-[5rem] font-extrabold text-gray-700'
-      >
-        <span className='text-indigo-500'>Next</span> Day
-      </Link>
+      <LogoHomeBtn />
       <h3 className='text-[1.75rem] lg:text-[2rem] md:text-[2rem] font-extrabold text-gray-700 w-full lg:w-2/3 md:w-full pt-8'>
         Making Good Habits
       </h3>
       {/* Text about making good habits */}
-      <p className='text-lg text-gray-500 w-full lg:w-2/3 md:w-full'>
+      <p className='w-full text-lg text-gray-500 lg:w-2/3 md:w-full'>
         <strong>
           5 Habits That Will Help You Achieve Your Goals, According to Research
           Introduction: What are Habits and Why are they Important to our
@@ -39,20 +35,20 @@ const Habits: NextPage = () => {
         <strong>5)</strong> Ensure that You have Clear Goals in Place with
         Specific Actions Required for Successful Habit Formation
       </p>
-      <h4 className='text-2xl font-extrabold text-gray-700 w-full lg:w-2/3 md:w-full'>
+      <h4 className='w-full text-2xl font-extrabold text-gray-700 lg:w-2/3 md:w-full'>
         Practice One Habit at a Time
       </h4>
-      <p className='text-lg text-gray-500 w-full lg:w-2/3 md:w-full'>
+      <p className='w-full text-lg text-gray-500 lg:w-2/3 md:w-full'>
         If you&apos;re looking for a way to make the most out of your day, try
         focusing on one habit at a time. This will help you focus on one thing
         at a time and not overwhelm yourself. You can also break down habits
         into smaller, more manageable tasks. For instance, if you want to stop
         biting your nails, start by painting them with clear nail polish.
       </p>
-      <h4 className='text-2xl font-extrabold text-gray-700 w-full lg:w-2/3 md:w-full'>
+      <h4 className='w-full text-2xl font-extrabold text-gray-700 lg:w-2/3 md:w-full'>
         Increase the Frequency for Rhythmical Habits
       </h4>
-      <p className='text-lg text-gray-500 w-full lg:w-2/3 md:w-full'>
+      <p className='w-full text-lg text-gray-500 lg:w-2/3 md:w-full'>
         The best way to develop a habit is to make it part of your routine.
         Studies show that the best time to practice a new habit is when you are
         already in the process of doing something else. For example, if you want
@@ -64,10 +60,10 @@ const Habits: NextPage = () => {
         it&apos;s already part of what you&apos;re doing every day and
         doesn&apos;t require any additional effort.
       </p>
-      <h4 className='text-2xl font-extrabold text-gray-700 w-full lg:w-2/3 md:w-full'>
+      <h4 className='w-full text-2xl font-extrabold text-gray-700 lg:w-2/3 md:w-full'>
         Form Habits around Positive Reinforcement or Rewards
       </h4>
-      <p className='text-lg text-gray-500 w-full lg:w-2/3 md:w-full'>
+      <p className='w-full text-lg text-gray-500 lg:w-2/3 md:w-full'>
         There are two types of habits: positive and negative. The best way to
         make a habit is to use positive reinforcement or rewards. Positive
         reinforcement is when you reward yourself for doing the behavior, like
@@ -76,10 +72,10 @@ const Habits: NextPage = () => {
         the behavior, like if you don&apos;t go to the gym then you can&apos;t
         watch your favorite TV show.
       </p>
-      <h4 className='text-2xl font-extrabold text-gray-700 w-full lg:w-2/3 md:w-full'>
+      <h4 className='w-full text-2xl font-extrabold text-gray-700 lg:w-2/3 md:w-full'>
         Avoid Temptation by Setting a Boundary or Limit for Yourself
       </h4>
-      <p className='text-lg text-gray-500 w-full lg:w-2/3 md:w-full'>
+      <p className='w-full text-lg text-gray-500 lg:w-2/3 md:w-full'>
         It is always important to set a boundary or limit for yourself. This
         way, you can avoid temptation and make sure that you are practicing good
         habits. Some people find it difficult to make good habits and practice
@@ -88,11 +84,11 @@ const Habits: NextPage = () => {
         someone wants to exercise every day, they should make sure that they
         have time for it in their schedule.
       </p>
-      <h4 className='text-2xl font-extrabold text-gray-700 w-full lg:w-2/3 md:w-full'>
+      <h4 className='w-full text-2xl font-extrabold text-gray-700 lg:w-2/3 md:w-full'>
         Ensure that You have Clear Goals in Place with Specific Actions Required
         for Successful Habit Formation
       </h4>
-      <p className='text-lg text-gray-500 w-full lg:w-2/3 md:w-full'>
+      <p className='w-full text-lg text-gray-500 lg:w-2/3 md:w-full'>
         We all have habits that we would like to form or break. But it can be
         difficult to do so. That&apos;s why you should take the time to set
         clear goals and make a plan of action. It&apos;s important to know what
@@ -100,12 +96,7 @@ const Habits: NextPage = () => {
         them in order for your habit formation process to be successful.
       </p>
 
-      <Link
-        href='/'
-        className='text-base text-violet-600 underline decoration-dotted underline-offset-2 cursor-pointer py-4'
-      >
-        Go Home 🏠
-      </Link>
+      <GoHomeBtn />
     </div>
   );
 };

@@ -68,7 +68,7 @@ function TodoList() {
           </Link>
           <UserStatus />
 
-          <div className='flex flex-row items-center justify-center w-full px-8 py-4 sm:px-32 xl:px-64'>
+          <div className='flex flex-row items-center justify-center w-full px-8 py-4 sm:px-16 xl:px-64'>
             <div className='flex flex-row items-center justify-between w-full border-b-2 border-gray-300'>
               <h3 className='text-[2rem] lg:text-[3rem] md:text-[3rem] font-extrabold text-gray-700'>
                 Task Lists:
@@ -77,7 +77,7 @@ function TodoList() {
             </div>
           </div>
 
-          <div className='grid w-full grid-cols-1 gap-3 px-8 pt-3 mt-3 sm:px-32 xl:px-64 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 md:w-full'>
+          <div className='grid w-full grid-cols-1 gap-3 px-8 pt-3 mt-3 sm:px-16 xl:px-64 md:grid-cols-2 xl:grid-cols-3 md:w-full'>
             {todo_lists?.map(
               (todo_list) => (
                 count++,
